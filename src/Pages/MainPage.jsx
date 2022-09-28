@@ -1,3 +1,10 @@
+import * as Styled from './styled.jsx';
+
 export const MainPage = () => {
-  return <div>메인 페이지입니다.</div>;
+  return (
+    <Styled.PageContainer>
+      <Styled.PageWhiteSpace></Styled.PageWhiteSpace>
+      <Styled.PageButton>결제 하기</Styled.PageButton>
+    </Styled.PageContainer>
+  );
 };
