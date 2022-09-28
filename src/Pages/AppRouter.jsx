@@ -6,6 +6,7 @@ import axios from 'axios';
 
 export const AppRouter = () => {
   const [user, setUser] = useState(null);
+  const coupon = [];
 
   const getUser = async () => {
     await axios
@@ -37,13 +38,30 @@ export const AppRouter = () => {
       .catch(error => console.log(error));
   };
 
+  const getCoupon = async () => {
+    for (let i = 0; i < user.coupons.length; i++) {
+      await axios
+        .get(`http://localhost:4000/coupons/${user.coupons[i]}`)
+        .then(response => {
+          coupon.push({
+            id: user.coupons[i],
+            type: response.data.type,
+            name: response.data.name,
+            value: response.data.value,
+          });
+        })
+        .catch(error => console.log(error));
+    }
+  };
+
   useEffect(() => {
     getUser();
   }, []);
 
   useEffect(() => {
-    console.log('쿠폰 데이터 받기');
-    console.log(user);
+    if (user) {
+      getCoupon();
+    }
   }, [user]);
 
   return (
