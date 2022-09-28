@@ -33,8 +33,8 @@ src
 │   ├── AppRouter.jsx
 │   ├── MainPage.jsx
 │   └── OrderPage.jsx
-├── index.js
 ├── App.js
 ├── App.css
-└── Constants.js
+├── Constants.js
+└── index.js
 ```
