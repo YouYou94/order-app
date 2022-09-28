@@ -11,7 +11,28 @@ export const AppRouter = () => {
     await axios
       .get('http://localhost:4000/users/1n2pgi02k5')
       .then(response => {
+        setUser({
+          address: `${response.data.address.city} ${response.data.address.state} ${response.data.address.address_line}`,
+          address_detail: response.data.address.additional_address,
+          phone_number: response.data.phone_number.replace(/\-/g, ''),
+          additional_requests: [],
+          payment_methods: [
+            {
+              id: response.data.payment_methods[0].id,
+              vendor_name: response.data.payment_methods[0].vendor_name,
+              card_number: response.data.payment_methods[0].card_number,
+            },
+            {
+              id: response.data.payment_methods[1].id,
+              vendor_name: response.data.payment_methods[1].vendor_name,
+              card_number: response.data.payment_methods[1].card_number,
+            },
+          ],
+          coupons: response.data.coupons,
+          points: response.data.points,
+        });
         console.log(response);
+        console.log(user);
       })
       .catch(error => console.log(error));
   };
@@ -19,6 +40,11 @@ export const AppRouter = () => {
   useEffect(() => {
     getUser();
   }, []);
+
+  useEffect(() => {
+    console.log('쿠폰 데이터 받기');
+    console.log(user);
+  }, [user]);
 
   return (
     <BrowserRouter>
