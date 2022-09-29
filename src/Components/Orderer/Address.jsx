@@ -1,7 +1,13 @@
 import * as Styled from './styled.jsx';
 
 export const Address = ({ resultOrderer, setResultOrderer }) => {
-  const onHandlerChangeAddressDetail = () => {};
+  const onHandlerChangeAddressDetail = event => {
+    const { value } = event.target;
+    setResultOrderer(current => ({
+      ...current,
+      address_detail: value,
+    }));
+  };
 
   return (
     <Styled.OrdererComponentWrap>
