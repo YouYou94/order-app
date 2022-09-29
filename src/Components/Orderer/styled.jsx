@@ -28,4 +28,6 @@ export const OrdererComponentWrap = styled.div`
 
 export const OrdererComponentLabel = styled.div``;
 
-export const OrdererComponentInput = styled.input``;
+export const OrdererComponentInput = styled.input`
+  margin-top: 0.5rem;
+`;

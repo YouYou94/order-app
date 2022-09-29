@@ -15,6 +15,7 @@ export const Address = ({ resultOrderer, setResultOrderer }) => {
         {resultOrderer.address}
       </Styled.OrdererComponentLabel>
       <Styled.OrdererComponentInput
+        type="text"
         value={resultOrderer.address_detail}
         onChange={onHandlerChangeAddressDetail}
       />
