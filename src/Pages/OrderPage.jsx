@@ -7,8 +7,9 @@ export const OrderPage = ({ user }) => {
   const [resultOrderer, setResultOrderer] = useState({
     address: user.address,
     address_detail: user.address_detail,
+    phone_number: user.phone_number,
   });
-
+  console.log(user);
   return (
     <Styled.PageContainer>
       <Orderer
