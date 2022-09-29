@@ -12,7 +12,7 @@ export const OrderPage = ({ user }) => {
 
   return (
     <Styled.PageContainer>
-      <Orderer user={user} />
+      <Orderer user={user} result={result} setResult={setResult} />
     </Styled.PageContainer>
   );
 };

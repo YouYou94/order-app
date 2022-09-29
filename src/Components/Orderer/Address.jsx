@@ -1,12 +1,12 @@
 import * as Styled from './styled.jsx';
 
-export const Address = ({ user }) => {
+export const Address = ({ result, setResult }) => {
   return (
     <Styled.OrdererComponentWrap>
       <Styled.OrdererComponentLabel>
-        {user.address}
+        {result.orderer.address}
       </Styled.OrdererComponentLabel>
-      <Styled.OrdererComponentInput value={user.address_detail} />
+      <Styled.OrdererComponentInput value={result.orderer.address_detail} />
     </Styled.OrdererComponentWrap>
   );
 };
