@@ -5,7 +5,7 @@ export const Orderer = ({ user }) => {
   return (
     <Styled.OrdererWrap>
       <Styled.OrdererTitle>주문자 정보</Styled.OrdererTitle>
-      <Address />
+      <Address user={user} />
     </Styled.OrdererWrap>
   );
 };

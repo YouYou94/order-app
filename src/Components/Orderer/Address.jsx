@@ -1,6 +1,6 @@
 import * as Styled from './styled.jsx';
 
-export const Address = () => {
+export const Address = ({ user }) => {
   return (
     <Styled.OrdererComponentWrap>
       <Styled.OrdererComponentLabel></Styled.OrdererComponentLabel>
