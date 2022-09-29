@@ -68,7 +68,7 @@ export const AppRouter = () => {
         {/* 메인 페이지 */}
         <Route path="/order-app" element={<MainPage />} />
         {/* 주문 페이지 */}
-        <Route path="/order-app/order" element={<OrderPage />} />
+        <Route path="/order-app/order" element={<OrderPage user={user} />} />
       </Routes>
     </BrowserRouter>
   );

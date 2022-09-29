@@ -1,10 +1,10 @@
 import { Orderer } from '../Components/Orderer/Orderer.jsx';
 import * as Styled from './styled.jsx';
 
-export const OrderPage = () => {
+export const OrderPage = ({ user }) => {
   return (
     <Styled.PageContainer>
-      <Orderer />
+      <Orderer user={user} />
     </Styled.PageContainer>
   );
 };
