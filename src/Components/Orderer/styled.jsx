@@ -20,6 +20,9 @@ export const OrdererTitle = styled.label`
 
 // Orderer Component Styled-Components
 export const OrdererComponentWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+
   padding: 0.5rem;
 `;
 
