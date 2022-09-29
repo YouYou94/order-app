@@ -23,7 +23,7 @@ export const OrdererComponentWrap = styled.div`
   display: flex;
   flex-direction: column;
 
-  padding: 0.5rem;
+  padding: 0.3rem;
 `;
 
 export const OrdererComponentLabel = styled.div`
