@@ -1,12 +1,17 @@
 import * as Styled from './styled.jsx';
 
-export const Address = ({ result, setResult }) => {
+export const Address = ({ resultOrderer, setResultOrderer }) => {
+  const onHandlerChangeAddressDetail = () => {};
+
   return (
     <Styled.OrdererComponentWrap>
       <Styled.OrdererComponentLabel>
-        {result.orderer.address}
+        {resultOrderer.address}
       </Styled.OrdererComponentLabel>
-      <Styled.OrdererComponentInput value={result.orderer.address_detail} />
+      <Styled.OrdererComponentInput
+        value={resultOrderer.address_detail}
+        onChange={onHandlerChangeAddressDetail}
+      />
     </Styled.OrdererComponentWrap>
   );
 };
