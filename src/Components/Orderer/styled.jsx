@@ -17,3 +17,12 @@ export const OrdererTitle = styled.label`
   font-size: 1.5rem;
   font-weight: bold;
 `;
+
+// Orderer Component Styled-Components
+export const OrdererComponentWrap = styled.div`
+  padding: 0.5rem;
+`;
+
+export const OrdererComponentLabel = styled.div``;
+
+export const OrdererComponentInput = styled.input``;
