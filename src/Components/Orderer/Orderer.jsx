@@ -22,8 +22,8 @@ export const Orderer = ({
         setResultOrderer={setResultOrderer}
       />
       <Request
-        resultOrderer={resultOrderer}
-        setResultOrderer={setResultOrderer}
+        resultRequest={resultRequest}
+        setResultRequest={setResultRequest}
       />
     </Styled.OrdererWrap>
   );
