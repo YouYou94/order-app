@@ -3,7 +3,12 @@ import { PhoneNum } from './PhoneNum.jsx';
 import { Request } from './Request.jsx';
 import * as Styled from './styled.jsx';
 
-export const Orderer = ({ user, resultOrderer, setResultOrderer }) => {
+export const Orderer = ({
+  user,
+  resultOrderer,
+  setResultOrderer,
+  REQUESTOTTION,
+}) => {
   return (
     <Styled.OrdererWrap>
       <Styled.OrdererTitle>주문자 정보</Styled.OrdererTitle>
@@ -15,7 +20,7 @@ export const Orderer = ({ user, resultOrderer, setResultOrderer }) => {
         resultOrderer={resultOrderer}
         setResultOrderer={setResultOrderer}
       />
-      <Request />
+      <Request REQUESTOTTION={REQUESTOTTION} />
     </Styled.OrdererWrap>
   );
 };
