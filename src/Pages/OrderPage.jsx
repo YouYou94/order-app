@@ -22,6 +22,8 @@ export const OrderPage = ({ user }) => {
         user={user}
         resultOrderer={resultOrderer}
         setResultOrderer={setResultOrderer}
+        resultRequest={resultRequest}
+        setResultRequest={setResultRequest}
       />
     </Styled.PageContainer>
   );

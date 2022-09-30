@@ -3,7 +3,13 @@ import { PhoneNum } from './Info/PhoneNum.jsx';
 import { Request } from './Request/Request.jsx';
 import * as Styled from './styled.jsx';
 
-export const Orderer = ({ user, resultOrderer, setResultOrderer }) => {
+export const Orderer = ({
+  user,
+  resultOrderer,
+  setResultOrderer,
+  resultRequest,
+  setResultRequest,
+}) => {
   return (
     <Styled.OrdererWrap>
       <Styled.OrdererTitle>주문자 정보</Styled.OrdererTitle>
