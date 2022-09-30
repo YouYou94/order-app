@@ -1,6 +1,5 @@
 // 상수
 // Request
-
 export const REQUESTLIST = [
   {
     id: 0,
@@ -23,3 +22,5 @@ export const REQUESTLIST = [
     label: '직접 입력',
   },
 ];
+
+export const DEFAULT = 'DEFAULT';
