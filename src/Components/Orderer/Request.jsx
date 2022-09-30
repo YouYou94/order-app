@@ -1,0 +1,9 @@
+import * as Styled from './styled.jsx';
+
+export const Request = () => {
+  return (
+    <Styled.OrdererComponentWrap>
+      <Styled.RequestComponentSelect></Styled.RequestComponentSelect>
+    </Styled.OrdererComponentWrap>
+  );
+};

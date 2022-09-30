@@ -1,5 +1,6 @@
 import { Address } from './Address.jsx';
 import { PhoneNum } from './PhoneNum.jsx';
+import { Request } from './Request.jsx';
 import * as Styled from './styled.jsx';
 
 export const Orderer = ({ user, resultOrderer, setResultOrderer }) => {
@@ -14,6 +15,7 @@ export const Orderer = ({ user, resultOrderer, setResultOrderer }) => {
         resultOrderer={resultOrderer}
         setResultOrderer={setResultOrderer}
       />
+      <Request />
     </Styled.OrdererWrap>
   );
 };
