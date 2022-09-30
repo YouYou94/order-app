@@ -16,6 +16,10 @@ export const OrderPage = ({ user }) => {
     request: '',
     custom: false,
   });
+  // 결제 수단 선택
+  const [resultPayment, setResultPayment] = useState({
+    payment: '',
+  });
 
   return (
     <Styled.PageContainer>
@@ -26,7 +30,7 @@ export const OrderPage = ({ user }) => {
         resultRequest={resultRequest}
         setResultRequest={setResultRequest}
       />
-      <Payment />
+      <Payment user={user} setResultPayment={setResultPayment} />
     </Styled.PageContainer>
   );
 };
