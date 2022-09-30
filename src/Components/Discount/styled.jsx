@@ -12,3 +12,10 @@ export const DiscountWrap = styled.div`
 
   background-color: white;
 `;
+
+export const DiscountTitle = styled.label`
+  font-size: 1.5rem;
+  font-weight: bold;
+`;
+
+export const DiscountMethodWrap = styled.div``;
