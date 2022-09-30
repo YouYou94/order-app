@@ -2,10 +2,16 @@ import * as Styled from './styled.jsx';
 import { REQUESTLIST } from '../../Constants.js';
 
 export const Request = () => {
-  console.log(REQUESTLIST);
+  const option = REQUESTLIST.map(data => {
+    return (
+      <Styled.RequestOtion key={data.id} value={data.value}>
+        {data.label}
+      </Styled.RequestOtion>
+    );
+  });
   return (
     <Styled.OrdererComponentWrap>
-      <Styled.RequestSelect></Styled.RequestSelect>
+      <Styled.RequestSelect>{option}</Styled.RequestSelect>
     </Styled.OrdererComponentWrap>
   );
 };

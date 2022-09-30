@@ -33,4 +33,6 @@ export const OrdererComponentLabel = styled.div`
 export const OrdererComponentInput = styled.input``;
 
 // Request
-export const RequestComponentSelect = styled.select``;
+export const RequestSelect = styled.select``;
+
+export const RequestOtion = styled.option``;
