@@ -9,6 +9,12 @@ export const OrderPage = ({ user }) => {
     address_detail: user.address_detail,
     phone_number: user.phone_number,
   });
+
+  const [resultRequest, setResultRequest] = useState({
+    request: '',
+    custom: false,
+  });
+
   console.log(user);
   return (
     <Styled.PageContainer>

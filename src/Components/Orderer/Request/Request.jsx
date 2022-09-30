@@ -2,7 +2,7 @@ import * as Styled from '../styled.jsx';
 import { REQUESTLIST } from '../../../Constants.js';
 import { CustomRequest } from './CustomRequest.jsx';
 
-export const Request = () => {
+export const Request = ({ resultOrderer, setResultOrderer }) => {
   const option = REQUESTLIST.map(data => {
     return (
       <Styled.RequestOtion key={data.id} value={data.value}>

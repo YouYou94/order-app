@@ -15,7 +15,10 @@ export const Orderer = ({ user, resultOrderer, setResultOrderer }) => {
         resultOrderer={resultOrderer}
         setResultOrderer={setResultOrderer}
       />
-      <Request />
+      <Request
+        resultOrderer={resultOrderer}
+        setResultOrderer={setResultOrderer}
+      />
     </Styled.OrdererWrap>
   );
 };
