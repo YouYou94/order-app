@@ -1,9 +1,11 @@
 import * as Styled from './styled.jsx';
+import { REQUESTLIST } from '../../Constants.js';
 
-export const Request = ({ REQUESTOTTION }) => {
+export const Request = () => {
+  console.log(REQUESTLIST);
   return (
     <Styled.OrdererComponentWrap>
-      <Styled.RequestComponentSelect></Styled.RequestComponentSelect>
+      <Styled.RequestSelect></Styled.RequestSelect>
     </Styled.OrdererComponentWrap>
   );
 };
