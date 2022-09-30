@@ -38,7 +38,11 @@ export const Request = ({ resultRequest, setResultRequest }) => {
         </Styled.RequestOtion>
         {option}
       </Styled.RequestSelect>
-      {resultRequest.custom ? <CustomRequest /> : <></>}
+      {resultRequest.custom ? (
+        <CustomRequest setResultRequest={setResultRequest} />
+      ) : (
+        <></>
+      )}
     </Styled.OrdererComponentWrap>
   );
 };
