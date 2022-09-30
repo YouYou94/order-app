@@ -23,8 +23,10 @@ src
 │   │   └── PaymentMethod.jsx
 │   ├── Discount
 │   │   ├── styled.jsx
-│   │   ├── Coupon.jsx
-│   │   └── Point.jsx
+│   │   ├── Discount.jsx
+│   │   ├── DiscountMethod
+│   │       ├── Coupon.jsx
+│   │       └── Point.jsx
 │   ├── OrderHistory
 │   │   ├── styled.jsx
 │   │   └─ OrderHistory.jsx
