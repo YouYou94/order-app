@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Orderer } from '../Components/Orderer/Orderer.jsx';
+import { Payment } from '../Components/Payment/Payment.jsx';
 import * as Styled from './styled.jsx';
 
 export const OrderPage = ({ user }) => {
@@ -25,6 +26,7 @@ export const OrderPage = ({ user }) => {
         resultRequest={resultRequest}
         setResultRequest={setResultRequest}
       />
+      <Payment />
     </Styled.PageContainer>
   );
 };
