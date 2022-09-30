@@ -14,7 +14,7 @@ src
 │   │   ├── Orderer.jsx
 │   │   ├── Info
 │   │   │   ├── Address.jsx
-│   │   │   └─ PhoneNum.jsx
+│   │   │   └── PhoneNum.jsx
 │   │   └── Request
 │   │       ├── Request.jsx
 │   │       └── CustomRequest.jsx
