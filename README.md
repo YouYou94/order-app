@@ -12,10 +12,12 @@ src
 │   ├── Orderer
 │   │   ├── styled.jsx
 │   │   ├── Orderer.jsx
-│   │   ├── Address.jsx
-│   │   ├── PhoneNum.jsx
-│   │   ├── Request.jsx
-│   │   └── CustomRequest.jsx
+│   │   ├── Info
+│   │   │   ├── Address.jsx
+│   │   │   └─ PhoneNum.jsx
+│   │   └── Request
+│   │       ├── Request.jsx
+│   │       └── CustomRequest.jsx
 │   ├── PaymentMethod
 │   │   ├── styled.jsx
 │   │   └── PaymentMethod.jsx

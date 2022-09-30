@@ -1,4 +1,4 @@
-import * as Styled from './styled.jsx';
+import * as Styled from '../styled.jsx';
 
 export const Address = ({ resultOrderer, setResultOrderer }) => {
   const onHandlerChangeAddressDetail = event => {

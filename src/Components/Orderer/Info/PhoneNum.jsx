@@ -1,4 +1,4 @@
-import * as Styled from './styled.jsx';
+import * as Styled from '../styled.jsx';
 
 export const PhoneNum = ({ resultOrderer, setResultOrderer }) => {
   const onHandlerChangePhoneNum = event => {

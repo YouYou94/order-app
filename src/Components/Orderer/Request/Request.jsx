@@ -1,5 +1,5 @@
-import * as Styled from './styled.jsx';
-import { REQUESTLIST } from '../../Constants.js';
+import * as Styled from '../styled.jsx';
+import { REQUESTLIST } from '../../../Constants.js';
 
 export const Request = () => {
   const option = REQUESTLIST.map(data => {
