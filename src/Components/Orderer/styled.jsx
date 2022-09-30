@@ -42,3 +42,8 @@ export const CustomRequestTextArea = styled.textarea`
 
   margin-top: 0.5rem;
 `;
+
+export const CustomTextLength = styled.label`
+  font-size: 0.8rem;
+  text-align: right;
+`;
