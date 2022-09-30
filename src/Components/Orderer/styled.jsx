@@ -36,3 +36,9 @@ export const OrdererComponentInput = styled.input``;
 export const RequestSelect = styled.select``;
 
 export const RequestOtion = styled.option``;
+
+export const CustomRequestTextArea = styled.textarea`
+  height: 5rem;
+
+  margin-top: 0.5rem;
+`;

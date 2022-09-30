@@ -1,5 +1,6 @@
 import * as Styled from '../styled.jsx';
 import { REQUESTLIST } from '../../../Constants.js';
+import { CustomRequest } from './CustomRequest.jsx';
 
 export const Request = () => {
   const option = REQUESTLIST.map(data => {
@@ -12,6 +13,7 @@ export const Request = () => {
   return (
     <Styled.OrdererComponentWrap>
       <Styled.RequestSelect>{option}</Styled.RequestSelect>
+      <CustomRequest />
     </Styled.OrdererComponentWrap>
   );
 };
