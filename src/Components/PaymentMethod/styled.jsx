@@ -36,7 +36,7 @@ export const PaymentCarouselContent = styled.div`
 
   height: 100%;
 
-  background-color: rgb(185, 185, 185);
+  background-color: rgb(200, 200, 200);
   color: white;
 `;
 
