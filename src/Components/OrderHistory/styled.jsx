@@ -5,9 +5,9 @@ export const OrderHistoryWrap = styled.div`
 
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: center;
 
-  padding: 1rem;
+  padding: 0.3rem;
 
   background-color: white;
 `;
@@ -17,6 +17,22 @@ export const OrderHistoryTitle = styled.label`
   font-weight: bold;
 `;
 
-export const OrderHistoryContentWrap = styled.div``;
+export const OrderHistoryContentWrap = styled.div`
+  flex: 1;
 
-export const OrderHistoryContent = styled.div``;
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 1rem;
+`;
+
+export const OrderHistoryContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+
+  border-top: 1px solid black;
+
+  padding: 1rem 0;
+`;
+
+export const OrderHistoryLabel = styled.label``;
