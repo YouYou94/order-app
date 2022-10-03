@@ -25,3 +25,6 @@ export const REQUESTLIST = [
 
 export const DEFAULT = 'DEFAULT';
 export const CUSTOM = 'CUSTOM';
+
+// ORDER HISTORY
+export const TOTAL = 'TOTAL';
