@@ -1,15 +1,19 @@
 import styled from 'styled-components';
 
 export const PaymentWrap = styled.div`
-  flex: 1;
+  flex: 25%;
 
   display: flex;
   flex-direction: column;
 
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
   padding: 1rem;
 
   background-color: white;
+`;
+export const PaymentTitle = styled.label`
+  font-size: 1.5rem;
+  font-weight: bold;
 `;
 
 export const PaymentCarouselSlide = styled.div`
@@ -17,7 +21,10 @@ export const PaymentCarouselSlide = styled.div`
 
   flex: 1;
 
+  margin-top: 0.5rem;
+
   border: 1px solid black;
+  border-radius: 1rem;
 
   overflow: hidden;
 `;
@@ -36,7 +43,7 @@ export const PaymentCarouselContent = styled.div`
 
   height: 100%;
 
-  background-color: rgb(200, 200, 200);
+  background-color: rgb(225, 225, 225);
   color: white;
 `;
 

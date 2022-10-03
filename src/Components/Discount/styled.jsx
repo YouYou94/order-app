@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 export const DiscountWrap = styled.div`
-  flex: 1;
+  flex: 20%;
 
   display: flex;
   flex-direction: column;
 
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
 
   padding: 1rem;
 
@@ -19,17 +19,15 @@ export const DiscountTitle = styled.label`
 `;
 // Coupon & Points
 export const DiscountMethodWrap = styled.div`
-  flex: 1;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  margin: 1rem 0;
+  margin: 0.2rem 0;
 
   padding: 0.5rem;
 
-  background-color: rgb(200, 200, 200);
+  background-color: rgb(225, 225, 225);
 `;
 
 export const DiscountMethodLabel = styled.label`
@@ -37,12 +35,11 @@ export const DiscountMethodLabel = styled.label`
 
   color: ${prop => prop.color || 'black'};
 
+  font-size: 0.7rem;
   font-weight: ${prop => prop.weight || ''};
 `;
 
 export const DiscountMethodContentWrap = styled.div`
-  flex: 1;
-
   display: flex;
 
   margin-bottom: 0.1rem;

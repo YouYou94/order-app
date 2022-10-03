@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const OrderHistoryWrap = styled.div`
-  flex: 1;
+  flex: 40%;
 
   display: flex;
   flex-direction: column;

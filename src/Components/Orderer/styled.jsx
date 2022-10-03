@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 export const OrdererWrap = styled.div`
-  flex: 1;
+  flex: 20%;
 
   display: flex;
   flex-direction: column;
 
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
 
   padding: 1rem;
 
