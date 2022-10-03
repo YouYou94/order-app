@@ -5,7 +5,7 @@ export const OrderHistory = ({ OrderBasket }) => {
     return (
       <Styled.OrderHistoryContent key={order.id}>
         <Styled.OrderHistoryLabel>{order.name}</Styled.OrderHistoryLabel>
-        <Styled.OrderHistoryLabel>{order.price}</Styled.OrderHistoryLabel>
+        <Styled.OrderHistoryLabel>{order.price} 원</Styled.OrderHistoryLabel>
       </Styled.OrderHistoryContent>
     );
   });
