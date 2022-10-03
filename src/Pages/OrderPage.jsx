@@ -4,6 +4,13 @@ import { Orderer } from '../Components/Orderer/Orderer.jsx';
 import { Payment } from '../Components/PaymentMethod/Payment.jsx';
 import * as Styled from './styled.jsx';
 
+// 장바구니
+const ORDERBASKET = [
+  { id: 0, name: '태백시 감자올리브', price: 18000 },
+  { id: 1, name: '태백산 감자버거', price: 5400 },
+  { id: 2, name: '황지동 감자족발', price: 32000 },
+];
+
 export const OrderPage = ({ user }) => {
   // 결과 State
   // 주문자
