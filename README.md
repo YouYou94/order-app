@@ -4,7 +4,7 @@
 
 ## 링크
 
-LINK(https://youyou94.github.io/order-app/)
+[LINK](https://youyou94.github.io/order-app/)
 
 ## 컴포넌트 폴더 구조
 
