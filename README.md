@@ -26,7 +26,7 @@ src
 │   ├── Discount
 │   │   ├── styled.jsx
 │   │   ├── Discount.jsx
-│   │   ├── DiscountMethod
+│   │   └─ DiscountMethod
 │   │       ├── Coupon.jsx
 │   │       └── Point.jsx
 │   ├── OrderHistory
