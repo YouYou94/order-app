@@ -17,7 +17,7 @@ export const DiscountTitle = styled.label`
   font-size: 1.5rem;
   font-weight: bold;
 `;
-
+// Coupon & Points
 export const DiscountMethodWrap = styled.div`
   flex: 1;
 
@@ -40,8 +40,7 @@ export const DiscountMethodLabel = styled.label`
   font-weight: ${prop => prop.weight || ''};
 `;
 
-// Coupon
-export const CouponWrap = styled.div`
+export const DiscountMethodContentWrap = styled.div`
   flex: 1;
 
   display: flex;
@@ -49,11 +48,11 @@ export const CouponWrap = styled.div`
   margin-bottom: 0.1rem;
 `;
 
-export const CouponInput = styled.input`
+export const DiscountMethodInput = styled.input`
   flex: 75%;
 `;
 
-export const CouponBtn = styled.button`
+export const DiscountMethodBtn = styled.button`
   flex: 25%;
 
   border: none;
