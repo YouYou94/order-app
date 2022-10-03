@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Discount } from '../Components/Discount/Discount.jsx';
 import { Orderer } from '../Components/Orderer/Orderer.jsx';
+import { OrderHistory } from '../Components/OrderHistory/OrderHistory.jsx';
 import { Payment } from '../Components/PaymentMethod/Payment.jsx';
 import * as Styled from './styled.jsx';
 
@@ -40,6 +41,7 @@ export const OrderPage = ({ user }) => {
       />
       <Payment user={user} setResultPayment={setResultPayment} />
       <Discount />
+      <OrderHistory OrderBasket={ORDERBASKET} />
     </Styled.PageContainer>
   );
 };
