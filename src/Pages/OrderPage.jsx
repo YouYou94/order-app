@@ -38,6 +38,8 @@ export const OrderPage = ({ user, coupon }) => {
 
   const [resultDiscount, setResultDiscount] = useState({
     method: '',
+    type: '',
+    value: '',
   });
 
   return (
@@ -57,7 +59,15 @@ export const OrderPage = ({ user, coupon }) => {
         resultRequest={resultRequest}
         resultPayment={resultPayment}
       />
-      {isMenu ? <CouponMenu coupon={coupon} setIsMenu={setIsMenu} /> : <></>}
+      {isMenu ? (
+        <CouponMenu
+          coupon={coupon}
+          setIsMenu={setIsMenu}
+          setResultDiscount={setResultDiscount}
+        />
+      ) : (
+        <></>
+      )}
     </Styled.PageContainer>
   );
 };
