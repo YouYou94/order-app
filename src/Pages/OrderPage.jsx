@@ -57,7 +57,7 @@ export const OrderPage = ({ user }) => {
         resultRequest={resultRequest}
         resultPayment={resultPayment}
       />
-      {isMenu ? <CouponMenu /> : <></>}
+      {isMenu ? <CouponMenu setIsMenu={setIsMenu} /> : <></>}
     </Styled.PageContainer>
   );
 };
