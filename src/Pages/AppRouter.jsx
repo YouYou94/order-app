@@ -62,14 +62,17 @@ export const AppRouter = () => {
     }
   }, [user]);
 
-  if (user) {
+  if (user && coupon) {
     return (
       <BrowserRouter>
         <Routes>
           {/* 메인 페이지 */}
           <Route path="/order-app" element={<MainPage />} />
           {/* 주문 페이지 */}
-          <Route path="/order-app/order" element={<OrderPage user={user} />} />
+          <Route
+            path="/order-app/order"
+            element={<OrderPage user={user} coupon={coupon} />}
+          />
         </Routes>
       </BrowserRouter>
     );

@@ -5,7 +5,7 @@ import { Orderer } from '../Components/Orderer/Orderer.jsx';
 import { OrderHistory } from '../Components/OrderHistory/OrderHistory.jsx';
 import { Payment } from '../Components/PaymentMethod/Payment.jsx';
 import { PayOrder } from '../Components/PayOrder.jsx';
-import { TOTAL, REQUESTLIST } from '../Constants.js';
+import { TOTAL } from '../Constants.js';
 import * as Styled from './styled.jsx';
 
 // 장바구니
@@ -16,7 +16,7 @@ const ORDERBASKET = [
   { id: TOTAL, name: '결제 금액', price: 55400 },
 ];
 
-export const OrderPage = ({ user }) => {
+export const OrderPage = ({ user, coupon }) => {
   // 결과 State
   // 주문자
   const [resultOrderer, setResultOrderer] = useState({
@@ -57,7 +57,7 @@ export const OrderPage = ({ user }) => {
         resultRequest={resultRequest}
         resultPayment={resultPayment}
       />
-      {isMenu ? <CouponMenu setIsMenu={setIsMenu} /> : <></>}
+      {isMenu ? <CouponMenu coupon={coupon} setIsMenu={setIsMenu} /> : <></>}
     </Styled.PageContainer>
   );
 };

@@ -1,6 +1,6 @@
 import * as Styled from '../styled.jsx';
 
-export const Coupon = ({ setIsMenu }) => {
+export const Coupon = ({ coupon, setIsMenu }) => {
   const onHandlerDisplayCouponMenu = () => setIsMenu(true);
 
   return (
