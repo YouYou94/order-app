@@ -40,6 +40,7 @@ export const OrderPage = ({ user, coupon }) => {
     method: '',
     type: '',
     value: '',
+    name: '',
   });
 
   return (
@@ -53,7 +54,7 @@ export const OrderPage = ({ user, coupon }) => {
       />
       <Payment user={user} setResultPayment={setResultPayment} />
       <Discount setIsMenu={setIsMenu} />
-      <OrderHistory OrderBasket={ORDERBASKET} />
+      <OrderHistory OrderBasket={ORDERBASKET} resultDiscount={resultDiscount} />
       <PayOrder
         resultOrderer={resultOrderer}
         resultRequest={resultRequest}

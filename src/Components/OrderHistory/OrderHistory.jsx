@@ -1,6 +1,6 @@
 import * as Styled from './styled.jsx';
 
-export const OrderHistory = ({ OrderBasket }) => {
+export const OrderHistory = ({ OrderBasket, resultDiscount }) => {
   const orderHistory = OrderBasket.map(order => {
     return (
       <Styled.OrderHistoryContent key={order.id}>
@@ -10,6 +10,7 @@ export const OrderHistory = ({ OrderBasket }) => {
     );
   });
 
+  console.log(resultDiscount);
   return (
     <Styled.OrderHistoryWrap>
       <Styled.OrderHistoryTitle>배달 주문 내역</Styled.OrderHistoryTitle>

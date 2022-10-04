@@ -7,8 +7,9 @@ export const CouponMenu = ({ coupon, setIsMenu, setResultDiscount }) => {
     console.log(selectCoupon);
     setResultDiscount({
       method: COUPON,
-      type: selectCoupon.type,
-      value: selectCoupon.value,
+      type: selectCoupon[0].type,
+      value: selectCoupon[0].value,
+      name: selectCoupon[0].name,
     });
     setIsMenu(false);
   };
