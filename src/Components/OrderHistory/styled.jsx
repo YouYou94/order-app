@@ -32,7 +32,7 @@ export const OrderHistoryContent = styled.div`
 
   border-top: 1px solid black;
 
-  padding: 1rem 0;
+  padding: 0.7rem 0;
 `;
 
 export const OrderHistoryLabel = styled.label``;
