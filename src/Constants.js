@@ -27,9 +27,7 @@ export const DEFAULT = 'DEFAULT';
 export const CUSTOM = 'CUSTOM';
 
 // DISCOUNT
+export const NONE = '미적용';
 export const COUPON = '쿠폰';
 export const RATED = 'rated';
 export const FIXED = 'fixed';
-
-// ORDER HISTORY
-export const TOTAL = 'TOTAL';
