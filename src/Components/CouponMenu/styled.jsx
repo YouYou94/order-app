@@ -22,7 +22,7 @@ export const CouponMenuWrap = styled.div`
   display: flex;
   flex-direction: column;
 
-  margin: 0 1rem;
+  margin: 0 0.7rem;
   background-color: white;
 `;
 
