@@ -1,9 +1,10 @@
 import * as Styled from './styled.jsx';
 
-export const PayOrder = () => {
+export const PayOrder = ({ resultOrderer, resultRequest, resultPayment }) => {
   const onHandlerPayOrder = () => {
-    alert(`주소: \n상세주소: \n전화번호: \n주문 요청 사항: \n결제 수단: \n할인 수단: 
-        \n총 결제 금액: 원\n결제완료!`);
+    alert(
+      `주소: ${resultOrderer.address}\n상세주소: ${resultOrderer.address_detail}\n전화번호: ${resultOrderer.phone_number}\n주문 요청 사항: ${resultRequest.request}\n결제 수단: ${resultPayment.payment}\n할인 수단: \n총 결제 금액: 원\n결제완료!`
+    );
   };
   return (
     <Styled.PayOrderWrap>

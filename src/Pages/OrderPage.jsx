@@ -4,7 +4,7 @@ import { Orderer } from '../Components/Orderer/Orderer.jsx';
 import { OrderHistory } from '../Components/OrderHistory/OrderHistory.jsx';
 import { Payment } from '../Components/PaymentMethod/Payment.jsx';
 import { PayOrder } from '../Components/PayOrder.jsx';
-import { TOTAL } from '../Constants.js';
+import { TOTAL, REQUESTLIST } from '../Constants.js';
 import * as Styled from './styled.jsx';
 
 // 장바구니
@@ -45,7 +45,11 @@ export const OrderPage = ({ user }) => {
       <Payment user={user} setResultPayment={setResultPayment} />
       <Discount />
       <OrderHistory OrderBasket={ORDERBASKET} />
-      <PayOrder />
+      <PayOrder
+        resultOrderer={resultOrderer}
+        resultRequest={resultRequest}
+        resultPayment={resultPayment}
+      />
     </Styled.PageContainer>
   );
 };
