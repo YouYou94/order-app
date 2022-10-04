@@ -26,5 +26,10 @@ export const REQUESTLIST = [
 export const DEFAULT = 'DEFAULT';
 export const CUSTOM = 'CUSTOM';
 
+// DISCOUNT
+export const COUPON = 'COUPON';
+export const RATED = 'rated';
+export const FIXED = 'fixed';
+
 // ORDER HISTORY
 export const TOTAL = 'TOTAL';
