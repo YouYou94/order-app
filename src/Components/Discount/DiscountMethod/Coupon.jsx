@@ -1,6 +1,7 @@
 import * as Styled from '../styled.jsx';
+import { COUPON } from '../../../Constants.js';
 
-export const Coupon = ({ setIsMenu }) => {
+export const Coupon = ({ resultDiscount, setIsMenu }) => {
   const onHandlerDisplayCouponMenu = () => setIsMenu(true);
 
   return (
@@ -12,7 +13,12 @@ export const Coupon = ({ setIsMenu }) => {
         </Styled.DiscountMethodLabel>
       </Styled.DiscountMethodContentWrap>
       <Styled.DiscountMethodContentWrap>
-        <Styled.DiscountMethodInput type="text" />
+        <Styled.DiscountMethodInput
+          type="text"
+          defaultValue={
+            resultDiscount.method === COUPON ? resultDiscount.name : ''
+          }
+        />
         <Styled.DiscountMethodBtn onClick={onHandlerDisplayCouponMenu}>
           선택
         </Styled.DiscountMethodBtn>

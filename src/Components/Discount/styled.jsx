@@ -47,6 +47,8 @@ export const DiscountMethodContentWrap = styled.div`
 
 export const DiscountMethodInput = styled.input`
   flex: 75%;
+
+  text-overflow: ellipsis;
 `;
 
 export const DiscountMethodBtn = styled.button`
