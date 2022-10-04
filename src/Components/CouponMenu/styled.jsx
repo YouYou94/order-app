@@ -54,4 +54,6 @@ export const CouponLabel = styled.label`
   color: ${prop => prop.color || 'black'};
   font-weight: ${prop => prop.weight || ''};
   font-size: 0.8rem;
+
+  cursor: pointer;
 `;

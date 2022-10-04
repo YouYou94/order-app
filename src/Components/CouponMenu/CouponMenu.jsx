@@ -21,6 +21,7 @@ export const CouponMenu = ({ coupon, setIsMenu }) => {
           <Styled.CouponLabel>{coupon.name}</Styled.CouponLabel>
         </Styled.CouponContent>
       );
+    else return null;
   });
 
   console.log(coupon);
