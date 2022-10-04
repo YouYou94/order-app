@@ -1,5 +1,5 @@
 import * as Styled from './styled.jsx';
 
 export const CouponMenu = () => {
-  return;
+  return <Styled.CouponMenuContainer></Styled.CouponMenuContainer>;
 };
