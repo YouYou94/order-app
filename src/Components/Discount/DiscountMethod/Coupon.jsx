@@ -1,6 +1,8 @@
 import * as Styled from '../styled.jsx';
 
-export const Coupon = () => {
+export const Coupon = ({ setIsMenu }) => {
+  const onHandlerDisplayCouponMenu = () => setIsMenu(true);
+
   return (
     <Styled.DiscountMethodWrap>
       <Styled.DiscountMethodContentWrap>
@@ -11,7 +13,9 @@ export const Coupon = () => {
       </Styled.DiscountMethodContentWrap>
       <Styled.DiscountMethodContentWrap>
         <Styled.DiscountMethodInput type="text" />
-        <Styled.DiscountMethodBtn>선택</Styled.DiscountMethodBtn>
+        <Styled.DiscountMethodBtn onClick={onHandlerDisplayCouponMenu}>
+          선택
+        </Styled.DiscountMethodBtn>
       </Styled.DiscountMethodContentWrap>
     </Styled.DiscountMethodWrap>
   );

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { CouponMenu } from '../Components/CouponMenu/CouponMenu.jsx';
 import { Discount } from '../Components/Discount/Discount.jsx';
 import { Orderer } from '../Components/Orderer/Orderer.jsx';
 import { OrderHistory } from '../Components/OrderHistory/OrderHistory.jsx';
@@ -32,6 +33,12 @@ export const OrderPage = ({ user }) => {
   const [resultPayment, setResultPayment] = useState({
     payment: '',
   });
+  // 할인 수단 선택
+  const [isMenu, setIsMenu] = useState(false);
+
+  const [resultDiscount, setResultDiscount] = useState({
+    method: '',
+  });
 
   return (
     <Styled.PageContainer>
@@ -43,13 +50,14 @@ export const OrderPage = ({ user }) => {
         setResultRequest={setResultRequest}
       />
       <Payment user={user} setResultPayment={setResultPayment} />
-      <Discount />
+      <Discount setIsMenu={setIsMenu} />
       <OrderHistory OrderBasket={ORDERBASKET} />
       <PayOrder
         resultOrderer={resultOrderer}
         resultRequest={resultRequest}
         resultPayment={resultPayment}
       />
+      {isMenu ? <CouponMenu /> : <></>}
     </Styled.PageContainer>
   );
 };
