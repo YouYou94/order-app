@@ -57,6 +57,7 @@ src
 
 - 주문자 브랜치 생성
 - Orderer, 주문자 정보 섹션 구현
+- 새로고침 시 State의 undefined 트러블 슈팅
 
 ### 22.09.30
 
@@ -72,3 +73,6 @@ src
 
 - Discount, DiscountMethod, 쿠폰 및 포인트 섹션 styled-components 구현
 - 1차 merge 및 브랜치 정리
+- OrderHistory, 배달 주문 내역 styled-components 구현
+
+### 22.10.04
