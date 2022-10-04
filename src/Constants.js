@@ -27,7 +27,7 @@ export const DEFAULT = 'DEFAULT';
 export const CUSTOM = 'CUSTOM';
 
 // DISCOUNT
-export const COUPON = 'COUPON';
+export const COUPON = '쿠폰';
 export const RATED = 'rated';
 export const FIXED = 'fixed';
 
