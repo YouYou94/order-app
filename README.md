@@ -33,7 +33,7 @@ src
 │   │   ├── styled.jsx
 │   │   └─ OrderHistory.jsx
 │   ├── styled.jsx
-│   └── Order.jsx
+│   └── PayOrder.jsx
 ├── Pages
 │   ├── styled.jsx
 │   ├── AppRouter.jsx
@@ -76,3 +76,5 @@ src
 - OrderHistory, 배달 주문 내역 styled-components 구현
 
 ### 22.10.04
+
+- 결제하기 버튼 생성
