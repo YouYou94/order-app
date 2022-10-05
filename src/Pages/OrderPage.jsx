@@ -42,6 +42,9 @@ export const OrderPage = ({ user, coupon }) => {
     name: '',
   });
 
+  // 총 결제 금액
+  const [resultPrice, setResultPrice] = useState(0);
+
   return (
     <Styled.PageContainer>
       <Orderer
@@ -55,9 +58,15 @@ export const OrderPage = ({ user, coupon }) => {
       <Discount
         user={user}
         resultDiscount={resultDiscount}
+        resultPrice={resultPrice}
         setIsMenu={setIsMenu}
+        setResultDiscount={setResultDiscount}
       />
-      <OrderHistory OrderBasket={ORDERBASKET} resultDiscount={resultDiscount} />
+      <OrderHistory
+        OrderBasket={ORDERBASKET}
+        resultDiscount={resultDiscount}
+        setResultPrice={setResultPrice}
+      />
       <PayOrder
         resultOrderer={resultOrderer}
         resultRequest={resultRequest}
