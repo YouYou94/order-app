@@ -28,7 +28,10 @@ src
 │   │   ├── Discount.jsx
 │   │   └── DiscountMethod
 │   │       ├── Coupon.jsx
-│   │       └── Point.jsx
+│   │       └── Point
+│   │           ├── Point.jsx
+│   │           ├── PointUsing.jsx
+│   │           └── PointUsingAll.jsx
 │   ├── CouponMenu
 │   │   ├── styled.jsx
 │   │   └── CouponMenu.jsx

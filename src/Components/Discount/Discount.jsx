@@ -1,5 +1,5 @@
 import { Coupon } from './DiscountMethod/Coupon.jsx';
-import { Point } from './DiscountMethod/Point.jsx';
+import { Point } from './DiscountMethod/Point/Point.jsx';
 import * as Styled from './styled.jsx';
 
 export const Discount = ({
