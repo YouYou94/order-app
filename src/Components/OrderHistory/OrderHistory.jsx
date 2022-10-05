@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { NONE, COUPON, FIXED, RATED } from '../../Constants.js';
+import { NONE, COUPON, POINT, FIXED, RATED } from '../../Constants.js';
 import * as Styled from './styled.jsx';
 
 export const OrderHistory = ({
@@ -59,11 +59,23 @@ export const OrderHistory = ({
           break;
       }
       break;
+    case POINT:
+      discountPrice = resultDiscount.value;
+      discountHistory = (
+        <Styled.OrderHistoryContent>
+          <Styled.OrderHistoryLabel>* {POINT}</Styled.OrderHistoryLabel>
+          <Styled.OrderHistoryLabel>
+            {' '}
+            - {discountPrice} 원
+          </Styled.OrderHistoryLabel>
+        </Styled.OrderHistoryContent>
+      );
+      break;
     default:
       break;
   }
 
-  useEffect(() => setResultPrice(totalPrice), []);
+  useEffect(() => setResultPrice(totalPrice));
 
   return (
     <Styled.OrderHistoryWrap>
