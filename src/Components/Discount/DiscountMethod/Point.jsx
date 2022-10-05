@@ -11,7 +11,7 @@ export const Point = () => {
       </Styled.DiscountMethodContentWrap>
       <Styled.DiscountMethodContentWrap>
         <Styled.DiscountMethodInput type="text" />
-        <Styled.DiscountMethodBtn>선택</Styled.DiscountMethodBtn>
+        <Styled.DiscountMethodBtn>모두 사용</Styled.DiscountMethodBtn>
       </Styled.DiscountMethodContentWrap>
     </Styled.DiscountMethodWrap>
   );

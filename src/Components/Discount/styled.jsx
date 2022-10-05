@@ -46,13 +46,13 @@ export const DiscountMethodContentWrap = styled.div`
 `;
 
 export const DiscountMethodInput = styled.input`
-  flex: 75%;
+  flex: 70%;
 
   text-overflow: ellipsis;
 `;
 
 export const DiscountMethodBtn = styled.button`
-  flex: 25%;
+  flex: 30%;
 
   border: none;
 
