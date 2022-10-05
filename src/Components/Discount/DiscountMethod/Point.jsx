@@ -9,6 +9,8 @@ export const Point = ({
   setResultDiscount,
 }) => {
   const [point, setPoint] = useState(0);
+
+  // 포인트 모두 사용
   const onHandlerPointAll = () => {
     if (Number(user.points) > resultPrice) {
       setPoint(resultPrice);
@@ -29,7 +31,17 @@ export const Point = ({
     }
   };
 
-  const onHandlerPoint = event => {};
+  // 포인트 사용
+  const onHandlerPoint = event => {
+    const { value } = event.target;
+    setPoint(value);
+    setResultDiscount({
+      method: POINT,
+      type: FIXED,
+      value: Number(value),
+      name: '포인트 사용',
+    });
+  };
 
   useEffect(() => {
     if (resultDiscount.method !== POINT) setPoint(0);
