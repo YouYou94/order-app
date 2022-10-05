@@ -52,7 +52,11 @@ export const OrderPage = ({ user, coupon }) => {
         setResultRequest={setResultRequest}
       />
       <Payment user={user} setResultPayment={setResultPayment} />
-      <Discount resultDiscount={resultDiscount} setIsMenu={setIsMenu} />
+      <Discount
+        user={user}
+        resultDiscount={resultDiscount}
+        setIsMenu={setIsMenu}
+      />
       <OrderHistory OrderBasket={ORDERBASKET} resultDiscount={resultDiscount} />
       <PayOrder
         resultOrderer={resultOrderer}
