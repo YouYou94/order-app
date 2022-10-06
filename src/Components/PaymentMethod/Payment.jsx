@@ -8,18 +8,16 @@ export const Payment = ({ user, setResultPayment }) => {
   const [card, setCard] = useState(FIRST);
   const cardSlide = useRef();
 
-  const onHandlerPrev = event => {
-    if (card === FIRST) {
-    } else if (card === SECOND) {
+  const onHandlerPrev = () => {
+    if (card === SECOND) {
       setCard(FIRST);
       cardSlide.current.style.transition = 'transform 0.4s ease-in-out';
       cardSlide.current.style.transform = 'translateX(0%)';
     }
   };
 
-  const onHandlerNext = event => {
-    if (card === SECOND) {
-    } else if (card === FIRST) {
+  const onHandlerNext = () => {
+    if (card === FIRST) {
       setCard(SECOND);
       cardSlide.current.style.transition = 'transform 0.4s ease-in-out';
       cardSlide.current.style.transform = 'translateX(-50%)';
