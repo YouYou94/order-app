@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import * as Styled from './styled.jsx';
 
 const FIRST = 'first';
@@ -8,7 +8,6 @@ export const Payment = ({ user, setResultPayment }) => {
   const [card, setCard] = useState(FIRST);
   const cardSlide = useRef();
 
-  console.log(user);
   const cardList = user.payment_methods.map(card => {
     return (
       <Styled.CarouselContent key={card.id}>
@@ -25,6 +24,7 @@ export const Payment = ({ user, setResultPayment }) => {
   const onHandlerPrev = () => {
     if (card === SECOND) {
       setCard(FIRST);
+      setResultPayment(user.payment_methods[0].vendor_name);
       cardSlide.current.style.transition = 'transform 0.4s ease-in-out';
       cardSlide.current.style.transform = 'translateX(0%)';
     }
@@ -33,10 +33,13 @@ export const Payment = ({ user, setResultPayment }) => {
   const onHandlerNext = () => {
     if (card === FIRST) {
       setCard(SECOND);
+      setResultPayment(user.payment_methods[1].vendor_name);
       cardSlide.current.style.transition = 'transform 0.4s ease-in-out';
       cardSlide.current.style.transform = 'translateX(-50%)';
     }
   };
+
+  useEffect(() => setResultPayment(user.payment_methods[0].vendor_name));
 
   return (
     <Styled.PaymentWrap>
