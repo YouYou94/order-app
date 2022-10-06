@@ -61,6 +61,8 @@ export const CarouselPrevBtn = styled.button`
   background-image: url(${prev});
   background-repeat: no-repeat;
   background-size: cover;
+
+  cursor: pointer;
 `;
 
 export const CarouselNextBtn = styled.button`
@@ -75,4 +77,6 @@ export const CarouselNextBtn = styled.button`
   background-image: url(${next});
   background-repeat: no-repeat;
   background-size: cover;
+
+  cursor: pointer;
 `;
