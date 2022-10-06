@@ -40,9 +40,23 @@ export const CarouselContent = styled.div`
   width: 100%;
   height: 100%;
 
-  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 0.5rem;
 
   background-color: rgb(225, 225, 225);
+`;
+
+export const CarouselVendorName = styled.label`
+  flex: 30%;
+
+  padding: 1rem;
+`;
+
+export const CarouselCardNumber = styled.label`
+  flex: 70%;
+  text-align: center;
 `;
 
 export const CarouselBtnContainer = styled.div`
