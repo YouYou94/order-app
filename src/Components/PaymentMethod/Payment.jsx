@@ -24,7 +24,9 @@ export const Payment = ({ user, setResultPayment }) => {
   const onHandlerPrev = () => {
     if (card === SECOND) {
       setCard(FIRST);
-      setResultPayment(user.payment_methods[0].vendor_name);
+      setResultPayment({
+        payment: user.payment_methods[0].vendor_name,
+      });
       cardSlide.current.style.transition = 'transform 0.4s ease-in-out';
       cardSlide.current.style.transform = 'translateX(0%)';
     }
@@ -33,13 +35,13 @@ export const Payment = ({ user, setResultPayment }) => {
   const onHandlerNext = () => {
     if (card === FIRST) {
       setCard(SECOND);
-      setResultPayment(user.payment_methods[1].vendor_name);
+      setResultPayment({
+        payment: user.payment_methods[1].vendor_name,
+      });
       cardSlide.current.style.transition = 'transform 0.4s ease-in-out';
       cardSlide.current.style.transform = 'translateX(-50%)';
     }
   };
-
-  useEffect(() => setResultPayment(user.payment_methods[0].vendor_name));
 
   return (
     <Styled.PaymentWrap>

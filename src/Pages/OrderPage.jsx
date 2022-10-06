@@ -25,12 +25,12 @@ export const OrderPage = ({ user, coupon }) => {
   });
   // 주문 요청 사항
   const [resultRequest, setResultRequest] = useState({
-    request: '',
+    request: '선택 안함',
     custom: false,
   });
   // 결제 수단 선택
   const [resultPayment, setResultPayment] = useState({
-    payment: '',
+    payment: user.payment_methods[0].vendor_name,
   });
   // 할인 수단 선택
   const [isMenu, setIsMenu] = useState(false);
@@ -71,6 +71,8 @@ export const OrderPage = ({ user, coupon }) => {
         resultOrderer={resultOrderer}
         resultRequest={resultRequest}
         resultPayment={resultPayment}
+        resultDiscount={resultDiscount}
+        resultPrice={resultPrice}
       />
       {isMenu ? (
         <CouponMenu
