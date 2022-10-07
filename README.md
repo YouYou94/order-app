@@ -94,9 +94,17 @@ src
 - 포인트 사용 기능 구현
 - 할인 내역 포인트 추가
 - 쿠폰 및 포인트 브랜치 코드 PayOrder와 병합
+
+### 22.10.06
+
 - 캐러셀 슬라이드 구현
 - 배달 주문 내역 Branch Merge
 - 결제 하기 Branch Merge
 - 쿠폰 Branch Merge
 - 포인트 Branch Merge
 - 캐러셀 슬라이드 Branch Merge
+
+### 22.10.07
+
+- 코드 정리
+- 유효성 검사
