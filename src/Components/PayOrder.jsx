@@ -1,7 +1,6 @@
 import * as Styled from './styled.jsx';
 import { NONE, POINT, COUPON } from '../Constants.js';
 import { useNavigate } from 'react-router-dom';
-import { Discount } from './Discount/Discount.jsx';
 
 export const PayOrder = ({
   resultOrderer,
