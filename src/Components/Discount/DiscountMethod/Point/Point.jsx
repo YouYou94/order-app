@@ -30,6 +30,7 @@ export const Point = ({
           resultDiscount={resultDiscount}
           setPoint={setPoint}
           setResultDiscount={setResultDiscount}
+          resultPrice={resultPrice}
         />
         <PoingUsingAll
           user={user}

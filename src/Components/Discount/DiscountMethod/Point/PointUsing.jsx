@@ -6,10 +6,17 @@ export const PoingUsing = ({
   resultDiscount,
   setPoint,
   setResultDiscount,
+  resultPrice,
 }) => {
   const onHandlerPoint = event => {
     const { value } = event.target;
     setPoint(value);
+
+    if (Number(value) > resultPrice) {
+      alert('결제 금액보다 많습니다!');
+      setPoint(0);
+    }
+
     setResultDiscount({
       method: POINT,
       type: FIXED,
