@@ -9,7 +9,6 @@ export const CouponMenu = ({
 }) => {
   const onHandlerSelectCoupon = event => {
     const selectCoupon = coupon.filter(coupon => coupon.id === event.target.id);
-    console.log(selectCoupon);
 
     let discountValue = 0;
 
@@ -25,6 +24,7 @@ export const CouponMenu = ({
 
     setResultDiscount({
       method: COUPON,
+      id: event.target.id,
       type: selectCoupon[0].type,
       value: selectCoupon[0].value,
       name: selectCoupon[0].name,

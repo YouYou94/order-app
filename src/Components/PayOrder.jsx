@@ -1,5 +1,7 @@
 import * as Styled from './styled.jsx';
+import { NONE, POINT, COUPON } from '../Constants.js';
 import { useNavigate } from 'react-router-dom';
+import { Discount } from './Discount/Discount.jsx';
 
 export const PayOrder = ({
   resultOrderer,
@@ -34,6 +36,27 @@ export const PayOrder = ({
           ...current.additional_requests,
         ],
       }));
+    }
+
+    if (resultDiscount.method !== NONE) {
+      if (resultDiscount.method === COUPON) {
+        const remainCoupon = user.coupons.filter(
+          coupon => coupon !== resultDiscount.id
+        );
+        console.log(resultDiscount.id);
+        console.log(remainCoupon);
+        console.log(user.coupons);
+        setUser(current => ({
+          ...current,
+          coupons: remainCoupon,
+        }));
+      } else if (resultDiscount.method === POINT) {
+        const remainPoint = Number(user.points) - Number(resultDiscount.value);
+        setUser(current => ({
+          ...current,
+          points: remainPoint,
+        }));
+      }
     }
 
     navigate('/order-app/');
