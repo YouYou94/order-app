@@ -15,7 +15,7 @@ const ORDERBASKET = [
   { id: 2, name: '황지동 감자족발', price: 32000 },
 ];
 
-export const OrderPage = ({ user, coupon }) => {
+export const OrderPage = ({ user, coupon, setUser }) => {
   // 결과 State
   // 주문자
   const [resultOrderer, setResultOrderer] = useState({
@@ -74,6 +74,8 @@ export const OrderPage = ({ user, coupon }) => {
         resultPayment={resultPayment}
         resultDiscount={resultDiscount}
         resultPrice={resultPrice}
+        user={user}
+        setUser={setUser}
       />
       {isMenu ? (
         <CouponMenu

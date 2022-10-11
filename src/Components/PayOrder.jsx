@@ -1,4 +1,5 @@
 import * as Styled from './styled.jsx';
+import { useNavigate } from 'react-router-dom';
 
 export const PayOrder = ({
   resultOrderer,
@@ -6,7 +7,11 @@ export const PayOrder = ({
   resultPayment,
   resultDiscount,
   resultPrice,
+  user,
+  setUser,
 }) => {
+  const navigate = useNavigate();
+
   const onHandlerPayOrder = () => {
     alert(
       `주소: ${resultOrderer.address}\n상세주소: ${
@@ -19,6 +24,19 @@ export const PayOrder = ({
         resultPrice - Number(resultDiscount.price)
       }원\n결제완료!`
     );
+
+    if (resultRequest.custom === true) {
+      if (user.additional_requests.length >= 3) user.additional_requests.pop();
+      setUser(current => ({
+        ...current,
+        additional_requests: [
+          resultRequest.request,
+          ...current.additional_requests,
+        ],
+      }));
+    }
+
+    navigate('/order-app/');
   };
   return (
     <Styled.PayOrderWrap>

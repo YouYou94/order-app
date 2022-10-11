@@ -71,7 +71,9 @@ export const AppRouter = () => {
           {/* 주문 페이지 */}
           <Route
             path="/order-app/order"
-            element={<OrderPage user={user} coupon={coupon} />}
+            element={
+              <OrderPage user={user} coupon={coupon} setUser={setUser} />
+            }
           />
         </Routes>
       </BrowserRouter>

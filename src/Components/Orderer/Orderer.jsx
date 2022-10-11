@@ -22,6 +22,7 @@ export const Orderer = ({
         setResultOrderer={setResultOrderer}
       />
       <Request
+        user={user}
         resultRequest={resultRequest}
         setResultRequest={setResultRequest}
       />
