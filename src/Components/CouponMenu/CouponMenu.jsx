@@ -1,15 +1,34 @@
 import * as Styled from './styled.jsx';
 import { RATED, FIXED, COUPON } from '../../Constants.js';
 
-export const CouponMenu = ({ coupon, setIsMenu, setResultDiscount }) => {
+export const CouponMenu = ({
+  coupon,
+  setIsMenu,
+  setResultDiscount,
+  resultPrice,
+}) => {
   const onHandlerSelectCoupon = event => {
     const selectCoupon = coupon.filter(coupon => coupon.id === event.target.id);
     console.log(selectCoupon);
+
+    let discountValue = 0;
+
+    if (selectCoupon[0].type === FIXED) {
+      if (Number(selectCoupon[0].value) > resultPrice)
+        discountValue = resultPrice;
+      else discountValue = resultPrice - Number(selectCoupon[0].value);
+    } else if (selectCoupon[0].type === RATED) {
+      discountValue = Math.ceil(
+        (resultPrice * Number(selectCoupon[0].value)) / 100
+      );
+    }
+
     setResultDiscount({
       method: COUPON,
       type: selectCoupon[0].type,
       value: selectCoupon[0].value,
       name: selectCoupon[0].name,
+      price: discountValue,
     });
     setIsMenu(false);
   };

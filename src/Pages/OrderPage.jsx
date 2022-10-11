@@ -40,6 +40,7 @@ export const OrderPage = ({ user, coupon }) => {
     type: '',
     value: '',
     name: '',
+    price: '',
   });
 
   // 총 결제 금액
@@ -79,6 +80,7 @@ export const OrderPage = ({ user, coupon }) => {
           coupon={coupon}
           setIsMenu={setIsMenu}
           setResultDiscount={setResultDiscount}
+          resultPrice={resultPrice}
         />
       ) : (
         <></>
