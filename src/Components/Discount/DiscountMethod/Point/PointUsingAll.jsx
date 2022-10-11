@@ -15,6 +15,7 @@ export const PoingUsingAll = ({
         type: FIXED,
         value: resultPrice,
         name: '포인트 사용',
+        price: Number(resultPrice),
       });
     } else {
       setPoint(Number(user.points));
@@ -23,6 +24,7 @@ export const PoingUsingAll = ({
         type: FIXED,
         value: Number(user.points),
         name: '포인트 사용',
+        price: Number(user.points),
       });
     }
   };

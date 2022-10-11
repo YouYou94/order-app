@@ -15,6 +15,7 @@ export const PoingUsing = ({
       type: FIXED,
       value: Number(value),
       name: '포인트 사용',
+      price: Number(value),
     });
   };
 
