@@ -21,9 +21,9 @@ export const PayOrder = ({
         resultRequest.request
       }\n결제 수단: ${resultPayment.payment}\n할인 수단: ${
         resultDiscount.method
-      }\n총 결제 금액: ${
+      }\n총 결제 금액: ${(
         resultPrice - Number(resultDiscount.price)
-      }원\n결제완료!`
+      ).toLocaleString('ko-KR')}원\n결제완료!`
     );
 
     if (resultRequest.custom === true) {

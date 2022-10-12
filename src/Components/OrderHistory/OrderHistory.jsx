@@ -15,7 +15,9 @@ export const OrderHistory = ({
     return (
       <Styled.OrderHistoryContent key={order.id}>
         <Styled.OrderHistoryLabel>{order.name}</Styled.OrderHistoryLabel>
-        <Styled.OrderHistoryLabel>{order.price} 원</Styled.OrderHistoryLabel>
+        <Styled.OrderHistoryLabel>
+          {order.price.toLocaleString('ko-KR')} 원
+        </Styled.OrderHistoryLabel>
       </Styled.OrderHistoryContent>
     );
   });
@@ -86,7 +88,7 @@ export const OrderHistory = ({
         <Styled.OrderHistoryContent>
           <Styled.OrderHistoryLabel>결제 금액</Styled.OrderHistoryLabel>
           <Styled.OrderHistoryLabel>
-            {totalPrice - discountPrice} 원
+            {(totalPrice - discountPrice).toLocaleString('ko-KR')} 원
           </Styled.OrderHistoryLabel>
         </Styled.OrderHistoryContent>
       </Styled.OrderHistoryContentWrap>
