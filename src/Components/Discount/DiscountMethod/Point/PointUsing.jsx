@@ -35,7 +35,9 @@ export const PoingUsing = ({
 
   return (
     <Styled.DiscountMethodInput
-      type="text"
+      type="number"
+      step="100"
+      min="1000"
       value={resultDiscount.method === POINT ? point : 0}
       onChange={onHandlerPoint}
     />
