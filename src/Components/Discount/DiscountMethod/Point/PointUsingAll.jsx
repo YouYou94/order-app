@@ -2,13 +2,13 @@ import * as Styled from '../../styled.jsx';
 import { POINT, FIXED } from '../../../../Constants.js';
 
 export const PoingUsingAll = ({
-  user,
+  points,
   resultPrice,
   setPoint,
   setResultDiscount,
 }) => {
   const onHandlerPointAll = () => {
-    if (Number(user.points) > resultPrice) {
+    if (Number(points) > resultPrice) {
       setPoint(resultPrice);
       setResultDiscount({
         method: POINT,
@@ -18,13 +18,13 @@ export const PoingUsingAll = ({
         price: Number(resultPrice),
       });
     } else {
-      setPoint(Number(user.points));
+      setPoint(Number(points));
       setResultDiscount({
         method: POINT,
         type: FIXED,
-        value: Number(user.points),
+        value: Number(points),
         name: '포인트 사용',
-        price: Number(user.points),
+        price: Number(points),
       });
     }
   };

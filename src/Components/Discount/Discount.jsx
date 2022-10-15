@@ -9,16 +9,17 @@ export const Discount = ({
   setIsMenu,
   setResultDiscount,
 }) => {
+  console.log(user);
   return (
     <Styled.DiscountWrap>
       <Styled.DiscountTitle>할인 수단 선택</Styled.DiscountTitle>
       <Coupon
-        user={user}
+        coupon={user.coupons}
         resultDiscount={resultDiscount}
         setIsMenu={setIsMenu}
       />
       <Point
-        user={user}
+        points={user.points}
         resultPrice={resultPrice}
         resultDiscount={resultDiscount}
         setResultDiscount={setResultDiscount}

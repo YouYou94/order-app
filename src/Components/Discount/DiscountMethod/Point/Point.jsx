@@ -5,7 +5,7 @@ import { PoingUsing } from './PointUsing.jsx';
 import { PoingUsingAll } from './PointUsingAll.jsx';
 
 export const Point = ({
-  user,
+  points,
   resultPrice,
   resultDiscount,
   setResultDiscount,
@@ -21,8 +21,8 @@ export const Point = ({
       <Styled.DiscountMethodContentWrap>
         <Styled.DiscountMethodLabel>포인트</Styled.DiscountMethodLabel>
         <Styled.DiscountMethodLabel color="blueviolet" weight="bold">
-          사용 가능한 포인트{' '}
-          {Number(user.points - point).toLocaleString('ko-KR')}점
+          사용 가능한 포인트 {(Number(points) - point).toLocaleString('ko-KR')}
+          점
         </Styled.DiscountMethodLabel>
       </Styled.DiscountMethodContentWrap>
       <Styled.DiscountMethodContentWrap>
@@ -34,7 +34,7 @@ export const Point = ({
           resultPrice={resultPrice}
         />
         <PoingUsingAll
-          user={user}
+          points={points}
           resultPrice={resultPrice}
           setPoint={setPoint}
           setResultDiscount={setResultDiscount}
