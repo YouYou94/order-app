@@ -1,5 +1,5 @@
 import * as Styled from './styled.jsx';
-import { RATED, FIXED, COUPON } from '../../Constants.js';
+import { FIXED, COUPON } from '../../Constants.js';
 import { CouponTypeCheck } from './CouponTypeCheck/CouponTypeCheck.jsx';
 
 export const CouponMenu = ({
@@ -8,20 +8,20 @@ export const CouponMenu = ({
   setResultDiscount,
   resultPrice,
 }) => {
+  const valueCheck = (value, resultPrice) => {
+    if (value > resultPrice) return resultPrice;
+    else return resultPrice - value;
+  };
+
   const onHandlerSelectCoupon = event => {
     const selectCoupon = coupon.find(coupon => coupon.id === event.target.id);
     console.log(selectCoupon);
 
     let discountValue = 0;
 
-    if (selectCoupon.type === FIXED) {
-      if (Number(selectCoupon.value) > resultPrice) discountValue = resultPrice;
-      else discountValue = resultPrice - Number(selectCoupon.value);
-    } else if (selectCoupon.type === RATED) {
-      discountValue = Math.ceil(
-        (resultPrice * Number(selectCoupon.value)) / 100
-      );
-    }
+    selectCoupon.type === FIXED
+      ? (discountValue = valueCheck(selectCoupon.value, resultPrice))
+      : (discountValue = Math.ceil((resultPrice * selectCoupon.value) / 100));
 
     setResultDiscount({
       method: COUPON,
@@ -31,6 +31,7 @@ export const CouponMenu = ({
       name: selectCoupon.name,
       price: discountValue,
     });
+
     setIsMenu(false);
   };
 
