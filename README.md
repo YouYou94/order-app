@@ -22,7 +22,10 @@ src
 │   │       └── CustomRequest.jsx
 │   ├── PaymentMethod
 │   │   ├── styled.jsx
-│   │   └── PaymentMethod.jsx
+│   │   ├── PaymentMethod.jsx
+│   │   └── assets
+│   │       ├── next.png
+│   │       └── prev.png
 │   ├── Discount
 │   │   ├── styled.jsx
 │   │   ├── Discount.jsx
@@ -34,10 +37,12 @@ src
 │   │           └── PointUsingAll.jsx
 │   ├── CouponMenu
 │   │   ├── styled.jsx
-│   │   └── CouponMenu.jsx
+│   │   ├── CouponMenu.jsx
+│   │   └── CouponTypeCheck
+│   │       └── CouponTypeCheck.jsx
 │   ├── OrderHistory
 │   │   ├── styled.jsx
-│   │   └─ OrderHistory.jsx
+│   │   └── OrderHistory.jsx
 │   ├── styled.jsx
 │   └── PayOrder.jsx
 ├── Pages
