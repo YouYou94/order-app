@@ -15,7 +15,6 @@ export const CouponMenu = ({
 
   const onHandlerSelectCoupon = event => {
     const selectCoupon = coupon.find(coupon => coupon.id === event.target.id);
-    console.log(selectCoupon);
 
     let discountValue = 0;
 

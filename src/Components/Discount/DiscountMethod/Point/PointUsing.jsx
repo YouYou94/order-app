@@ -10,27 +10,31 @@ export const PoingUsing = ({
 }) => {
   const onHandlerPoint = event => {
     const { value } = event.target;
-    setPoint(value);
+    const price = Number(value);
+    setPoint(price);
 
-    if (Number(value) > resultPrice) {
+    if (price > resultPrice) {
       alert('결제 금액보다 많습니다!');
       setPoint(0);
-      setResultDiscount({
-        method: NONE,
-        type: '',
-        value: 0,
-        name: '',
-        price: 0,
-      });
-    } else {
-      setResultDiscount({
-        method: POINT,
-        type: FIXED,
-        value: Number(value),
-        name: '포인트 사용',
-        price: Number(value),
-      });
     }
+
+    setResultDiscount(
+      price > resultPrice
+        ? {
+            method: NONE,
+            type: '',
+            value: 0,
+            name: '',
+            price: 0,
+          }
+        : {
+            method: POINT,
+            type: FIXED,
+            value: price,
+            name: '포인트 사용',
+            price: price,
+          }
+    );
   };
 
   return (

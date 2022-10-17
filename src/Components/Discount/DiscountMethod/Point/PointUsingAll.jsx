@@ -8,25 +8,24 @@ export const PoingUsingAll = ({
   setResultDiscount,
 }) => {
   const onHandlerPointAll = () => {
-    if (Number(points) > resultPrice) {
-      setPoint(resultPrice);
-      setResultDiscount({
-        method: POINT,
-        type: FIXED,
-        value: resultPrice,
-        name: '포인트 사용',
-        price: Number(resultPrice),
-      });
-    } else {
-      setPoint(Number(points));
-      setResultDiscount({
-        method: POINT,
-        type: FIXED,
-        value: Number(points),
-        name: '포인트 사용',
-        price: Number(points),
-      });
-    }
+    setPoint(points > resultPrice ? resultPrice : points);
+    setResultDiscount(
+      points > resultPrice
+        ? {
+            method: POINT,
+            type: FIXED,
+            value: resultPrice,
+            name: '포인트 사용',
+            price: resultPrice,
+          }
+        : {
+            method: POINT,
+            type: FIXED,
+            value: points,
+            name: '포인트 사용',
+            price: points,
+          }
+    );
   };
 
   return (
