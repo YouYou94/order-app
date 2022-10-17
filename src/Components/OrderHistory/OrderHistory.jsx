@@ -23,7 +23,7 @@ export const OrderHistory = ({
     );
   });
 
-  // 할인 내역
+  // 할인 금액
   let discountHistory = [];
   let discountPrice = 0;
   switch (resultDiscount.method) {
@@ -48,6 +48,7 @@ export const OrderHistory = ({
       break;
   }
 
+  // 할인 내역
   discountHistory = (
     <DiscountHistory
       method={resultDiscount.method}
