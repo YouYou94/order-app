@@ -32,19 +32,14 @@ export const OrderHistory = ({
       discountPrice = 0;
       break;
     case COUPON:
-      switch (resultDiscount.type) {
-        case FIXED:
-          discountPrice =
+      resultDiscount.type === FIXED
+        ? (discountPrice =
             resultDiscount.value > totalPrice
               ? totalPrice
-              : resultDiscount.value;
-          break;
-        case RATED:
-          discountPrice = Math.ceil((totalPrice * resultDiscount.value) / 100);
-          break;
-        default:
-          break;
-      }
+              : resultDiscount.value)
+        : (discountPrice = Math.ceil(
+            (totalPrice * resultDiscount.value) / 100
+          ));
       break;
     case POINT:
       discountPrice = resultDiscount.value;
