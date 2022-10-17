@@ -21,9 +21,9 @@ export const PayOrder = ({
         resultRequest.request
       }\n결제 수단: ${resultPayment.payment}\n할인 수단: ${
         resultDiscount.method
-      }\n총 결제 금액: ${(
-        resultPrice - Number(resultDiscount.price)
-      ).toLocaleString('ko-KR')}원\n결제완료!`
+      }\n총 결제 금액: ${(resultPrice - resultDiscount.price).toLocaleString(
+        'ko-KR'
+      )}원\n결제완료!`
     );
 
     if (resultRequest.custom === true) {
@@ -42,15 +42,12 @@ export const PayOrder = ({
         const remainCoupon = user.coupons.filter(
           coupon => coupon !== resultDiscount.id
         );
-        console.log(resultDiscount.id);
-        console.log(remainCoupon);
-        console.log(user.coupons);
         setUser(current => ({
           ...current,
           coupons: remainCoupon,
         }));
       } else if (resultDiscount.method === POINT) {
-        const remainPoint = Number(user.points) - Number(resultDiscount.value);
+        const remainPoint = user.points - resultDiscount.value;
         setUser(current => ({
           ...current,
           points: remainPoint,
