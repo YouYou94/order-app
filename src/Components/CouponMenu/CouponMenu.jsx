@@ -8,26 +8,26 @@ export const CouponMenu = ({
   resultPrice,
 }) => {
   const onHandlerSelectCoupon = event => {
-    const selectCoupon = coupon.filter(coupon => coupon.id === event.target.id);
+    const selectCoupon = coupon.find(coupon => coupon.id === event.target.id);
+    console.log(selectCoupon);
 
     let discountValue = 0;
 
-    if (selectCoupon[0].type === FIXED) {
-      if (Number(selectCoupon[0].value) > resultPrice)
-        discountValue = resultPrice;
-      else discountValue = resultPrice - Number(selectCoupon[0].value);
-    } else if (selectCoupon[0].type === RATED) {
+    if (selectCoupon.type === FIXED) {
+      if (Number(selectCoupon.value) > resultPrice) discountValue = resultPrice;
+      else discountValue = resultPrice - Number(selectCoupon.value);
+    } else if (selectCoupon.type === RATED) {
       discountValue = Math.ceil(
-        (resultPrice * Number(selectCoupon[0].value)) / 100
+        (resultPrice * Number(selectCoupon.value)) / 100
       );
     }
 
     setResultDiscount({
       method: COUPON,
       id: event.target.id,
-      type: selectCoupon[0].type,
-      value: selectCoupon[0].value,
-      name: selectCoupon[0].name,
+      type: selectCoupon.type,
+      value: selectCoupon.value,
+      name: selectCoupon.name,
       price: discountValue,
     });
     setIsMenu(false);
