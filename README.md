@@ -22,10 +22,7 @@ src
 │   │       └── CustomRequest.jsx
 │   ├── PaymentMethod
 │   │   ├── styled.jsx
-│   │   ├── PaymentMethod.jsx
-│   │   └── assets
-│   │       ├── next.png
-│   │       └── prev.png
+│   │   └── PaymentMethod.jsx
 │   ├── Discount
 │   │   ├── styled.jsx
 │   │   ├── Discount.jsx
@@ -50,6 +47,9 @@ src
 │   ├── AppRouter.jsx
 │   ├── MainPage.jsx
 │   └── OrderPage.jsx
+├── assets
+│   ├── next.png
+│   └── prev.png
 ├── App.js
 ├── App.css
 ├── Constants.js

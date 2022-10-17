@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import next from './assets/next.png';
-import prev from './assets/prev.png';
+import next from '../../assets/next.png';
+import prev from '../../assets/prev.png';
 
 export const PaymentWrap = styled.div`
   flex: 25%;
