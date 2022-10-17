@@ -39,7 +39,9 @@ src
 │   │       └── CouponTypeCheck.jsx
 │   ├── OrderHistory
 │   │   ├── styled.jsx
-│   │   └── OrderHistory.jsx
+│   │   ├── OrderHistory.jsx
+│   │   └── DiscountHistory
+│   │       └── DiscountHistory.jsx
 │   ├── styled.jsx
 │   └── PayOrder.jsx
 ├── Pages

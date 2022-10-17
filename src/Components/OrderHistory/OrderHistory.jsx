@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { NONE, COUPON, POINT, FIXED, RATED } from '../../Constants.js';
+import { DiscountHistory } from './DiscountHistory/DiscountHistory.jsx';
 import * as Styled from './styled.jsx';
 
 export const OrderHistory = ({
@@ -33,29 +34,13 @@ export const OrderHistory = ({
     case COUPON:
       switch (resultDiscount.type) {
         case FIXED:
-          if (resultDiscount.value > totalPrice) discountPrice = totalPrice;
-          else discountPrice = resultDiscount.value;
-
-          discountHistory = (
-            <Styled.OrderHistoryContent>
-              <Styled.OrderHistoryLabel>* {COUPON}</Styled.OrderHistoryLabel>
-              <Styled.OrderHistoryLabel>
-                - {discountPrice} 원
-              </Styled.OrderHistoryLabel>
-            </Styled.OrderHistoryContent>
-          );
+          discountPrice =
+            resultDiscount.value > totalPrice
+              ? totalPrice
+              : resultDiscount.value;
           break;
         case RATED:
           discountPrice = Math.ceil((totalPrice * resultDiscount.value) / 100);
-
-          discountHistory = (
-            <Styled.OrderHistoryContent>
-              <Styled.OrderHistoryLabel>* {COUPON}</Styled.OrderHistoryLabel>
-              <Styled.OrderHistoryLabel>
-                - {discountPrice} 원
-              </Styled.OrderHistoryLabel>
-            </Styled.OrderHistoryContent>
-          );
           break;
         default:
           break;
@@ -63,19 +48,17 @@ export const OrderHistory = ({
       break;
     case POINT:
       discountPrice = resultDiscount.value;
-      discountHistory = (
-        <Styled.OrderHistoryContent>
-          <Styled.OrderHistoryLabel>* {POINT}</Styled.OrderHistoryLabel>
-          <Styled.OrderHistoryLabel>
-            {' '}
-            - {discountPrice} 원
-          </Styled.OrderHistoryLabel>
-        </Styled.OrderHistoryContent>
-      );
       break;
     default:
       break;
   }
+
+  discountHistory = (
+    <DiscountHistory
+      method={resultDiscount.method}
+      discountPrice={discountPrice}
+    />
+  );
 
   useEffect(() => setResultPrice(totalPrice));
 
