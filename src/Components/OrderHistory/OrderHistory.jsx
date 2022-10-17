@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { NONE, COUPON, POINT, FIXED, RATED } from '../../Constants.js';
+import { NONE, COUPON, POINT, FIXED } from '../../Constants.js';
 import { DiscountHistory } from './DiscountHistory/DiscountHistory.jsx';
 import * as Styled from './styled.jsx';
 
