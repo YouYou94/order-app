@@ -9,7 +9,6 @@ export const Discount = ({
   setIsMenu,
   setResultDiscount,
 }) => {
-  console.log(user);
   return (
     <Styled.DiscountWrap>
       <Styled.DiscountTitle>할인 수단 선택</Styled.DiscountTitle>
