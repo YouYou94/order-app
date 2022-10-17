@@ -12,7 +12,7 @@ export const OrderHistory = ({
 
   // 장바구니 내역
   const orderHistory = OrderBasket.map(order => {
-    totalPrice = totalPrice + Number(order.price);
+    totalPrice = totalPrice + order.price;
     return (
       <Styled.OrderHistoryContent key={order.id}>
         <Styled.OrderHistoryLabel>{order.name}</Styled.OrderHistoryLabel>
