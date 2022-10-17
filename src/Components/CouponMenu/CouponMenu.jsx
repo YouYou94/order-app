@@ -1,7 +1,6 @@
 import * as Styled from './styled.jsx';
 import { RATED, FIXED, COUPON } from '../../Constants.js';
-import { FixedCoupon } from './FixedCoupon/FixedCoupon.jsx';
-import { RatedCoupon } from './RatedCoupon/RatedCoupon.jsx';
+import { CouponTypeCheck } from './CouponTypeCheck/CouponTypeCheck.jsx';
 
 export const CouponMenu = ({
   coupon,
@@ -42,11 +41,7 @@ export const CouponMenu = ({
         onClick={onHandlerSelectCoupon}
         id={coupon.id}
       >
-        {coupon.type === FIXED ? (
-          <FixedCoupon coupon={coupon} />
-        ) : (
-          <RatedCoupon coupon={coupon} />
-        )}
+        <CouponTypeCheck coupon={coupon} />
         <Styled.CouponLabel id={coupon.id}>{coupon.name}</Styled.CouponLabel>
       </Styled.CouponContent>
     );
