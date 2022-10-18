@@ -1,24 +1,10 @@
 import * as Styled from '../styled.jsx';
-import { REQUESTLIST, DEFAULT, CUSTOM } from '../../../Constants.js';
+import { DEFAULT, CUSTOM } from '../../../Constants.js';
 import { CustomRequest } from './CustomRequest.jsx';
+import { RequestList } from './RequestList/RequestList.jsx';
+import { AddRequestList } from './RequestList/AddRequestList.jsx';
 
 export const Request = ({ user, resultRequest, setResultRequest }) => {
-  const addOption = user.additional_requests.map(option => {
-    return (
-      <Styled.RequestOtion key={option} value={option || ''}>
-        {option}
-      </Styled.RequestOtion>
-    );
-  });
-
-  const option = REQUESTLIST.map(data => {
-    return (
-      <Styled.RequestOtion key={data.id} value={data.value}>
-        {data.label}
-      </Styled.RequestOtion>
-    );
-  });
-
   const onHandlerChangeSelect = event => {
     const { value } = event.target;
 
@@ -44,8 +30,8 @@ export const Request = ({ user, resultRequest, setResultRequest }) => {
         <Styled.RequestOtion value={DEFAULT} disabled hidden>
           선택해주세요.
         </Styled.RequestOtion>
-        {addOption}
-        {option}
+        <AddRequestList additional_requests={user.additional_requests} />
+        <RequestList />
       </Styled.RequestSelect>
       {resultRequest.custom ? (
         <CustomRequest setResultRequest={setResultRequest} />
