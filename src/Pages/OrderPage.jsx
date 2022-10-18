@@ -15,7 +15,14 @@ const ORDERBASKET = [
   { id: 2, name: '황지동 감자족발', price: 32000 },
 ];
 
-const TOTALPRICE = { id: 'TOTAL', name: '결제 금액', price: 55400 };
+// 총 결제 금액
+const TOTALPRICE = {
+  id: 'TOTAL',
+  name: '결제 금액',
+  price: ORDERBASKET.reduce(function add(sum, current) {
+    return sum + current.price;
+  }, 0),
+};
 
 export const OrderPage = ({ user, coupon, setUser }) => {
   // 결과 State
