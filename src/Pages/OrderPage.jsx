@@ -15,6 +15,8 @@ const ORDERBASKET = [
   { id: 2, name: '황지동 감자족발', price: 32000 },
 ];
 
+const TOTALPRICE = { id: 'TOTAL', name: '결제 금액', price: 55400 };
+
 export const OrderPage = ({ user, coupon, setUser }) => {
   // 결과 State
   // 주문자
@@ -65,6 +67,7 @@ export const OrderPage = ({ user, coupon, setUser }) => {
       />
       <OrderHistory
         OrderBasket={ORDERBASKET}
+        TOTALPRICE={TOTALPRICE}
         resultDiscount={resultDiscount}
         setResultPrice={setResultPrice}
       />

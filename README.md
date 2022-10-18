@@ -45,7 +45,9 @@ src
 │   │   ├── styled.jsx
 │   │   ├── OrderHistory.jsx
 │   │   └── DiscountHistory
-│   │       └── DiscountHistory.jsx
+│   │       ├── BasketHistory.jsx
+│   │       ├── DiscountHistory.jsx
+│   │       └── TotalHistory.jsx
 │   ├── styled.jsx
 │   └── PayOrder.jsx
 ├── Pages
