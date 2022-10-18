@@ -7,6 +7,7 @@ import { AddRequestList } from './RequestList/AddRequestList.jsx';
 export const Request = ({ user, resultRequest, setResultRequest }) => {
   const onHandlerChangeSelect = event => {
     const { value } = event.target;
+    console.log(value);
 
     setResultRequest(
       value === CUSTOM
@@ -15,7 +16,7 @@ export const Request = ({ user, resultRequest, setResultRequest }) => {
             custom: true,
           }
         : {
-            request: event.target[value].innerText,
+            request: value,
             custom: false,
           }
     );
