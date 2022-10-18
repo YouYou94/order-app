@@ -8,17 +8,17 @@ export const Request = ({ user, resultRequest, setResultRequest }) => {
   const onHandlerChangeSelect = event => {
     const { value } = event.target;
 
-    if (value === CUSTOM) {
-      setResultRequest({
-        request: '',
-        custom: true,
-      });
-    } else {
-      setResultRequest({
-        request: event.target[value].innerText,
-        custom: false,
-      });
-    }
+    setResultRequest(
+      value === CUSTOM
+        ? {
+            request: '',
+            custom: true,
+          }
+        : {
+            request: event.target[value].innerText,
+            custom: false,
+          }
+    );
   };
 
   return (
