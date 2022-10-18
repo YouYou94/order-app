@@ -35,7 +35,8 @@ src
 │   ├── CouponMenu
 │   │   ├── styled.jsx
 │   │   ├── CouponMenu.jsx
-│   │   └── CouponTypeCheck
+│   │   └── CouponList
+│   │       ├── CouponList.jsx
 │   │       └── CouponTypeCheck.jsx
 │   ├── OrderHistory
 │   │   ├── styled.jsx

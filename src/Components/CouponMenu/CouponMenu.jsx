@@ -1,6 +1,6 @@
 import * as Styled from './styled.jsx';
 import { FIXED, COUPON } from '../../Constants.js';
-import { CouponTypeCheck } from './CouponTypeCheck/CouponTypeCheck.jsx';
+import { CouponList } from './CouponList/CouponList.jsx';
 
 export const CouponMenu = ({
   coupon,
@@ -34,19 +34,6 @@ export const CouponMenu = ({
     setIsMenu(false);
   };
 
-  const couponList = coupon.map(coupon => {
-    return (
-      <Styled.CouponContent
-        key={coupon.id}
-        onClick={onHandlerSelectCoupon}
-        id={coupon.id}
-      >
-        <CouponTypeCheck coupon={coupon} />
-        <Styled.CouponLabel id={coupon.id}>{coupon.name}</Styled.CouponLabel>
-      </Styled.CouponContent>
-    );
-  });
-
   return (
     <Styled.CouponMenuContainer>
       <Styled.CouponMenuWhiteSpace
@@ -54,7 +41,10 @@ export const CouponMenu = ({
       ></Styled.CouponMenuWhiteSpace>
       <Styled.CouponMenuWrap>
         <Styled.CouponMenuTitle>보유 쿠폰</Styled.CouponMenuTitle>
-        {couponList}
+        <CouponList
+          coupon={coupon}
+          onHandlerSelectCoupon={onHandlerSelectCoupon}
+        />
       </Styled.CouponMenuWrap>
     </Styled.CouponMenuContainer>
   );
