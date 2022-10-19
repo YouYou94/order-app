@@ -38,9 +38,9 @@ export const OrderPage = ({ user, coupon, setUser }) => {
     custom: false,
   });
   // 결제 수단 선택
-  const [resultPayment, setResultPayment] = useState({
-    payment: user.payment_methods[0].vendor_name,
-  });
+  const [resultPayment, setResultPayment] = useState(
+    user.payment_methods[0].vendor_name
+  );
   // 할인 수단 선택
   const [isMenu, setIsMenu] = useState(false);
 

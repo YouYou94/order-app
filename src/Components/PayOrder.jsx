@@ -19,7 +19,7 @@ export const PayOrder = ({
         resultOrderer.address_detail
       }\n전화번호: ${resultOrderer.phone_number}\n주문 요청 사항: ${
         resultRequest.request
-      }\n결제 수단: ${resultPayment.payment}\n할인 수단: ${
+      }\n결제 수단: ${resultPayment}\n할인 수단: ${
         resultDiscount.method
       }\n총 결제 금액: ${(resultPrice - resultDiscount.price).toLocaleString(
         'ko-KR'
