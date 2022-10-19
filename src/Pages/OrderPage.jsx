@@ -64,7 +64,10 @@ export const OrderPage = ({ user, coupon, setUser }) => {
         resultRequest={resultRequest}
         setResultRequest={setResultRequest}
       />
-      <Payment user={user} setResultPayment={setResultPayment} />
+      <Payment
+        payment_methods={user.payment_methods}
+        setResultPayment={setResultPayment}
+      />
       <Discount
         user={user}
         resultDiscount={resultDiscount}
