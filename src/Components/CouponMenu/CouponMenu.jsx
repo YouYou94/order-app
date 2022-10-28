@@ -16,11 +16,10 @@ export const CouponMenu = ({
   const onHandlerSelectCoupon = event => {
     const selectCoupon = coupon.find(coupon => coupon.id === event.target.id);
 
-    let discountValue = 0;
-
-    selectCoupon.type === FIXED
-      ? (discountValue = valueCheck(selectCoupon.value, resultPrice))
-      : (discountValue = Math.ceil((resultPrice * selectCoupon.value) / 100));
+    let discountValue =
+      selectCoupon.type === FIXED
+        ? valueCheck(selectCoupon.value, resultPrice)
+        : Math.ceil((resultPrice * selectCoupon.value) / 100);
 
     setResultDiscount({
       method: COUPON,

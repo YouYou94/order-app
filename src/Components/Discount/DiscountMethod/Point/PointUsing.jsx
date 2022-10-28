@@ -1,6 +1,13 @@
 import * as Styled from '../../styled.jsx';
 import { POINT, FIXED, NONE } from '../../../../Constants.js';
 
+const DEFAULT = {
+  method: NONE,
+  type: '',
+  value: 0,
+  name: '',
+  price: 0,
+};
 export const PoingUsing = ({
   point,
   resultDiscount,
@@ -17,24 +24,18 @@ export const PoingUsing = ({
       alert('결제 금액보다 많습니다!');
       setPoint(0);
     }
-
-    setResultDiscount(
+    const resultdiscount =
       price > resultPrice
-        ? {
-            method: NONE,
-            type: '',
-            value: 0,
-            name: '',
-            price: 0,
-          }
+        ? DEFAULT
         : {
             method: POINT,
             type: FIXED,
             value: price,
             name: '포인트 사용',
             price: price,
-          }
-    );
+          };
+
+    setResultDiscount(resultdiscount);
   };
 
   return (
