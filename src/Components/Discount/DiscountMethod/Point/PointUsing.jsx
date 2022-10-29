@@ -24,6 +24,7 @@ export const PoingUsing = ({
       alert('결제 금액보다 많습니다!');
       setPoint(0);
     }
+
     const resultdiscount =
       price > resultPrice
         ? DEFAULT
