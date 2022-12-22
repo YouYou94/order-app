@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-export const discountButton = ({ onHandler, children }) => {
-  return <DiscountButton onClick={onHandler}>{children}</DiscountButton>;
+export const DiscountButton = ({ onHandler, children }) => {
+  return <DiscountBtn onClick={onHandler}>{children}</DiscountBtn>;
 };
 
-export const orderButton = ({ onHandler, children }) => {
-  return <OrderButton onClick={onHandler}>{children}</OrderButton>;
+export const OrderButton = ({ onHandler, children }) => {
+  return <OrderBtn onClick={onHandler}>{children}</OrderBtn>;
 };
 
-export const DiscountButton = styled.button``;
+export const DiscountBtn = styled.button``;
 
-export const OrderButton = styled.button``;
+export const OrderBtn = styled.button``;
