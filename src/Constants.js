@@ -32,3 +32,22 @@ export const COUPON = '쿠폰';
 export const POINT = '포인트';
 export const RATED = 'rated';
 export const FIXED = 'fixed';
+
+// 장바구니
+export const SHOPPINGBASKET = [
+  {
+    name: '허브향 닭다리살 구이와 매콤한 고르곤졸라 크림 곡물 리조또',
+    count: 2,
+    price: 20000,
+  },
+  {
+    name: '탕수육',
+    count: 99,
+    price: 1000,
+  },
+  {
+    name: '태백산 정기를 감싼 비비큐 황금올리브 닭가슴살',
+    count: 1,
+    price: 50000,
+  },
+];
