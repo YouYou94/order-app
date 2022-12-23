@@ -4,6 +4,7 @@ import Orderer from '../components/Orderer/Orderer';
 import Payment from '../components/Payment/Payment';
 
 export default function OrderPage() {
+  // 나중에 useEffect로 데이터 빼기
   const [user, setUser] = useState({
     info: {
       address: 'XX도 XX시 XX길 123',
@@ -20,7 +21,7 @@ export default function OrderPage() {
       {
         id: '4cw5gq6',
         vendor_name: '대한신용카드',
-        card_number: '5555666677778888',
+        card_number: '1064129856714552',
       },
     ],
   });
@@ -28,7 +29,7 @@ export default function OrderPage() {
   return (
     <OrderPageLayout>
       <Orderer user={user.info} setUser={setUser} />
-      <Payment />
+      <Payment payment={user.payment_methods} />
     </OrderPageLayout>
   );
 }
