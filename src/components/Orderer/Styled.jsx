@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const OrdererBox = styled.section`
   width: 414px;
-  height: 262px;
 
   display: flex;
   flex-direction: column;
@@ -58,4 +57,36 @@ export const RequestOption = styled.option`
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
+`;
+
+export const CustomArea = styled.textarea`
+  box-sizing: border-box;
+
+  width: 382px;
+  height: 128px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  padding: 8px 12px;
+  border: 1px solid rgb(204, 204, 204);
+  outline: none;
+`;
+
+export const TextLength = styled.label`
+  width: 382px;
+  height: 14px;
+
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+
+  text-align: right;
+
+  color: #212121;
 `;
