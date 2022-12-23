@@ -1,11 +1,11 @@
 import { OrdererInput } from '../common/Input.jsx';
 import * as Styled from './Styled.jsx';
 
-export default function OrdererAddress() {
+export default function OrdererAddress({ user, setUser }) {
   return (
     <Styled.AddressBox>
-      <Styled.AddressText>강원도 태백시 해지개길 26</Styled.AddressText>
-      <OrdererInput type={'text'} />
+      <Styled.AddressText>{user.address}</Styled.AddressText>
+      <OrdererInput type={'text'} value={user.address_detail} />
     </Styled.AddressBox>
   );
 }

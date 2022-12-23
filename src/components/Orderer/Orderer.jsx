@@ -4,12 +4,12 @@ import OrdererAddress from './OrdererAddress.jsx';
 import OrdererPhoneNum from './OrdererPhoneNum.jsx';
 import OrderRequest from './OrderRequest.jsx';
 
-export default function Orderer() {
+export default function Orderer({ user, setUser }) {
   return (
     <Styled.OrdererBox>
       <SectionTitle>주문자 정보</SectionTitle>
-      <OrdererAddress />
-      <OrdererPhoneNum />
+      <OrdererAddress user={user} setUser={setUser} />
+      <OrdererPhoneNum user={user} setUser={setUser} />
       <OrderRequest />
     </Styled.OrdererBox>
   );
