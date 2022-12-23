@@ -1,7 +1,12 @@
 import styled from 'styled-components';
+import Orderer from '../components/Orderer/Orderer';
 
 export default function OrderPage() {
-  return <OrderPageLayout></OrderPageLayout>;
+  return (
+    <OrderPageLayout>
+      <Orderer />
+    </OrderPageLayout>
+  );
 }
 
 export const OrderPageLayout = styled.div`
