@@ -1,6 +1,14 @@
 // 상수
 // Request
+export const DEFAULT = 'DEFAULT';
+export const CUSTOM = 'CUSTOM';
+
 export const REQUESTLIST = [
+  {
+    id: DEFAULT,
+    value: DEFAULT,
+    label: '요청사항을 선택 해주세요',
+  },
   {
     id: 1,
     value: '벨은 누르지 말아주세요!',
@@ -22,9 +30,6 @@ export const REQUESTLIST = [
     label: '직접 입력',
   },
 ];
-
-export const DEFAULT = 'DEFAULT';
-export const CUSTOM = 'CUSTOM';
 
 // DISCOUNT
 export const NONE = '미적용';
