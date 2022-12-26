@@ -1,7 +1,17 @@
 import styled from 'styled-components';
-import { Layout, OrdererAddress, OrdererPhoneNum, Title } from '../components';
+import {
+  Layout,
+  OrdererAddress,
+  OrdererPhoneNum,
+  SubTitle,
+  Title,
+  OrderRequest,
+  RequestList,
+  RequestCustom,
+} from '../components';
 import { useState, useContext } from 'react';
 import { UserContext } from '../App';
+import { REQUESTLIST } from '../Constants';
 
 export default function OrderPage() {
   const { user } = useContext(UserContext);
@@ -13,9 +23,14 @@ export default function OrderPage() {
     address: `${address.city} ${address.state} ${address.address_line}`,
     additional_address: `${address.additional_address}`,
     phone_number: phone_number.replace(/\-/g, ''),
+    request: {
+      list: REQUESTLIST,
+      custom: false,
+      user_request: '',
+    },
   });
 
-  console.log(result);
+  //console.log(result);
 
   const prop = { result, setResult };
 
@@ -25,6 +40,11 @@ export default function OrderPage() {
         <Title>주문자 정보</Title>
         <OrdererAddress prop={prop} />
         <OrdererPhoneNum prop={prop} />
+        <OrderRequest>
+          <SubTitle>주문 요청 사항</SubTitle>
+          <RequestList prop={prop} />
+          {result.request.custom ? <RequestCustom prop={prop} /> : <></>}
+        </OrderRequest>
       </Layout>
       <Layout></Layout>
       <Layout></Layout>
