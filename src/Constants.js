@@ -1,4 +1,30 @@
 // 상수
+// 디폴트 유저 정보
+export const DEFAULTUSER = {
+  address: {
+    city: '서울특별시',
+    state: '행복구',
+    address_line: '행복로 1길 2-3',
+    additional_address: '행복빌 201호',
+  },
+  phone_number: '010-3030-8080',
+
+  payment_methods: [
+    {
+      id: '1km2gm3',
+      vendor_name: '농협카드',
+      card_number: '1968109202950192',
+    },
+    {
+      id: '1gj29t1',
+      vendor_name: '현대오일카드',
+      card_number: '1959196220129591',
+    },
+  ],
+  coupons: [],
+  points: 0,
+};
+
 // Request
 export const DEFAULT = 'DEFAULT';
 export const CUSTOM = 'CUSTOM';
