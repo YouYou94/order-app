@@ -8,8 +8,8 @@ export const useAxios = url => {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(true);
 
-  const fetchData = async () => {
-    await axios
+  const fetchData = () => {
+    axios
       .get(url)
       .then(res => setResponse(res.data))
       .catch(err => setError(err))
