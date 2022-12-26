@@ -5,11 +5,6 @@ export const OrdererInput = ({ value, onHandler }) => {
 };
 
 export const InfoInput = styled.input`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
   box-sizing: border-box;
 
   width: 382px;
