@@ -1,7 +1,23 @@
 import { DiscountLabel, DiscountInput, DiscountButton } from '../index.jsx';
+import { useContext } from 'react';
+import { UserContext } from '../../App.js';
 import styled from 'styled-components';
+import { COUPON } from '../../Constants.js';
 
 export function Coupon({ prop }) {
+  const { couponList } = useContext(UserContext);
+  const { result, setResult } = prop;
+
+  const onHandlerClickCouponSelect = () => {
+    setResult({
+      ...result,
+      discount: {
+        ...result.discount,
+        method: COUPON,
+      },
+    });
+  };
+
   return (
     <CouponBox>
       <LabelBox>
@@ -9,12 +25,14 @@ export function Coupon({ prop }) {
           쿠폰
         </DiscountLabel>
         <DiscountLabel bold={700} color={'rgb(150, 18, 231)'}>
-          보유 쿠폰 장
+          보유 쿠폰 {couponList.length}장
         </DiscountLabel>
       </LabelBox>
       <InputBox>
-        <DiscountInput />
-        <DiscountButton>선택</DiscountButton>
+        <DiscountInput placeholder={'쿠폰을 선택해주세요.'} disabled={true} />
+        <DiscountButton onHandler={onHandlerClickCouponSelect}>
+          선택
+        </DiscountButton>
       </InputBox>
     </CouponBox>
   );
