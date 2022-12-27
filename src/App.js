@@ -28,7 +28,7 @@ function App() {
       if (user.coupons) {
         user.coupons.map(async coupon => {
           await axios.get(COUPON_URL + coupon).then(response => {
-            couponList.push(response.data);
+            couponList.push({ id: coupon, ...response.data });
           });
 
           return data;
@@ -39,7 +39,7 @@ function App() {
 
   const value = { user, couponList };
 
-  console.log(couponList);
+  //console.log(couponList);
 
   if (user)
     return (
