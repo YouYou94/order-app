@@ -4,7 +4,7 @@ import { UserContext } from '../../App.js';
 import styled from 'styled-components';
 import { COUPON } from '../../Constants.js';
 
-export function Coupon({ prop }) {
+export function Coupon({ prop, setIsMenu }) {
   const { couponList } = useContext(UserContext);
   const { result, setResult } = prop;
 
@@ -16,6 +16,8 @@ export function Coupon({ prop }) {
         method: COUPON,
       },
     });
+
+    setIsMenu(true);
   };
 
   return (
