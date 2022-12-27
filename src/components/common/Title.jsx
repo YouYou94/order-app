@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-export const Title = ({ children }) => {
-  return <MainText>{children}</MainText>;
+export const Title = ({ children, align }) => {
+  return <MainText align={align}>{children}</MainText>;
 };
 
 export const SubTitle = ({ children }) => {
@@ -17,6 +17,8 @@ export const MainText = styled.h1`
   font-weight: 700;
   font-size: 20px;
   line-height: 23px;
+
+  text-align: ${prop => prop.align};
 
   color: rgb(33, 33, 33);
 `;
