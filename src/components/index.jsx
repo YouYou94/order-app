@@ -6,7 +6,7 @@ export { OrdererInput, DiscountInput } from './common/Input.jsx';
 
 export { Title, SubTitle } from './common/Title.jsx';
 
-export { DiscountButton } from './common/Button.jsx';
+export { DiscountButton, PayButton } from './common/Button.jsx';
 
 export { DiscountLabel, CouponLabel } from './common/Label.jsx';
 
