@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-export const Layout = ({ children }) => {
-  return <SectionLayout>{children}</SectionLayout>;
+export const Layout = ({ isResult, children }) => {
+  return <SectionLayout isResult={isResult}>{children}</SectionLayout>;
 };
 
 export const SectionLayout = styled.section`
@@ -11,7 +11,7 @@ export const SectionLayout = styled.section`
 
   width: 414px;
 
-  padding: 16px;
+  ${prop => (prop.isResult ? 'padding-top: 24px' : 'padding:16px')};
   gap: 16px;
 
   background-color: white;
