@@ -53,4 +53,8 @@ export const DiscountMethodInput = styled.input`
   color: rgb(102, 102, 102);
 
   outline: none;
+
+  &:disabled {
+    background: white;
+  }
 `;
