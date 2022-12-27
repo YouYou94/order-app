@@ -11,7 +11,7 @@ export const SectionLayout = styled.section`
 
   width: 414px;
 
-  ${prop => (prop.isResult ? 'padding-top: 24px' : 'padding:16px')};
+  ${prop => (prop.isResult ? '' : 'padding:16px')};
   gap: 16px;
 
   background-color: white;
