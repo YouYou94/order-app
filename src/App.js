@@ -10,22 +10,26 @@ export const UserContext = createContext();
 function App() {
   // 유저 정보
   const { data, error, loading } = useAxios(USER_URL);
-  const [user, setUser] = useState(DEFAULTUSER);
+  const [user, setUser] = useState(null);
   const [coupon, setCoupon] = useState([]);
 
   useEffect(() => {
-    if (data) setUser(data);
-  }, []);
+    if (!loading)
+      if (data) setUser(data);
+      else setUser(DEFAULTUSER);
+  }, [data, loading]);
 
   const value = { user, coupon };
 
-  return (
-    <UserContext.Provider value={value}>
-      <div className="App">
-        <Router />
-      </div>
-    </UserContext.Provider>
-  );
+  if (user)
+    return (
+      <UserContext.Provider value={value}>
+        <div className="App">
+          <Router />
+        </div>
+      </UserContext.Provider>
+    );
+  else return null;
 }
 
 export default App;
