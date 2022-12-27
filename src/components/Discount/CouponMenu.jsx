@@ -2,7 +2,7 @@ import { CouponLabel, Title } from '../index.jsx';
 import styled from 'styled-components';
 import { useContext } from 'react';
 import { UserContext } from '../../App';
-import { COUPON, FIXED } from '../../Constants.js';
+import { COUPON, FIXED, RATED } from '../../Constants.js';
 
 export function CouponMenu({ prop, setIsMenu }) {
   const { couponList } = useContext(UserContext);
@@ -21,9 +21,15 @@ export function CouponMenu({ prop, setIsMenu }) {
       discount: {
         method: COUPON,
         type: type,
-        value: value,
+        value:
+          type === RATED
+            ? Math.ceil((result.resultPrice * value) / 100)
+            : value,
         name: name,
-        price: value,
+        price:
+          type === RATED
+            ? Math.ceil((result.resultPrice * value) / 100)
+            : value,
       },
     });
 
