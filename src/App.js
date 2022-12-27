@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { createContext, useEffect, useState } from 'react';
 import './App.css';
 import { useAxios } from './components/index.jsx';
@@ -5,21 +6,40 @@ import { DEFAULTUSER } from './Constants';
 import Router from './router/Router';
 
 const USER_URL = '/users/1n2pgi02k5';
+const COUPON_URL = '/coupons/';
 export const UserContext = createContext();
 
 function App() {
   // 유저 정보
   const { data, error, loading } = useAxios(USER_URL);
   const [user, setUser] = useState(null);
-  const [coupon, setCoupon] = useState([]);
+  const couponList = [];
 
   useEffect(() => {
     if (!loading)
       if (data) setUser(data);
       else setUser(DEFAULTUSER);
-  }, [data, loading]);
 
-  const value = { user, coupon };
+    if (error) console.log(error);
+  }, [data, error, loading]);
+
+  useEffect(() => {
+    if (user) {
+      if (user.coupons) {
+        user.coupons.map(async coupon => {
+          await axios.get(COUPON_URL + coupon).then(response => {
+            couponList.push(response.data);
+          });
+
+          return data;
+        });
+      }
+    }
+  });
+
+  const value = { user, couponList };
+
+  console.log(couponList);
 
   if (user)
     return (
