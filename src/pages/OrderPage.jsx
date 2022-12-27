@@ -8,6 +8,8 @@ import {
   OrderRequest,
   RequestList,
   RequestCustom,
+  Coupon,
+  Point,
 } from '../components';
 import { useState, useContext } from 'react';
 import { UserContext } from '../App';
@@ -17,7 +19,7 @@ export default function OrderPage() {
   const { user } = useContext(UserContext);
   const { address, phone_number } = user;
 
-  //console.log(address);
+  //console.log(user);
 
   const [result, setResult] = useState({
     address: `${address.city} ${address.state} ${address.address_line}`,
@@ -46,9 +48,17 @@ export default function OrderPage() {
           {result.request.custom ? <RequestCustom prop={prop} /> : <></>}
         </OrderRequest>
       </Layout>
-      <Layout></Layout>
-      <Layout></Layout>
-      <Layout></Layout>
+      <Layout>
+        <Title>결제 수단 선택</Title>
+      </Layout>
+      <Layout>
+        <Title>할인 수단 선택</Title>
+        <Coupon prop={prop} />
+        <Point prop={prop} />
+      </Layout>
+      <Layout>
+        <Title>배달 주문 내역</Title>
+      </Layout>
     </OrderPageLayout>
   );
 }

@@ -17,3 +17,6 @@ export {
   RequestList,
   RequestCustom,
 } from './Orderer/OrderRequest.jsx';
+
+export { Coupon } from './Discount/Coupon.jsx';
+export { Point } from './Discount/Point.jsx';
