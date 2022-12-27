@@ -10,10 +10,11 @@ import {
   RequestCustom,
   Coupon,
   Point,
+  CouponMenu,
 } from '../components';
 import { useState, useContext } from 'react';
 import { UserContext } from '../App';
-import { REQUESTLIST } from '../Constants';
+import { COUPON, NONE, REQUESTLIST } from '../Constants';
 
 export default function OrderPage() {
   const { user } = useContext(UserContext);
@@ -24,13 +25,22 @@ export default function OrderPage() {
   const [result, setResult] = useState({
     address: `${address.city} ${address.state} ${address.address_line}`,
     additional_address: `${address.additional_address}`,
-    phone_number: phone_number.replace(/\-/g, ''),
+    phone_number: phone_number.replace(/-/g, ''),
     request: {
       list: REQUESTLIST,
       custom: false,
       user_request: '',
     },
+    discount: {
+      method: NONE,
+      type: '',
+      value: '',
+      name: '',
+      price: '',
+    },
   });
+
+  const [isMenu, setIsMenu] = useState(false);
 
   //console.log(result);
 
@@ -53,17 +63,20 @@ export default function OrderPage() {
       </Layout>
       <Layout>
         <Title>할인 수단 선택</Title>
-        <Coupon prop={prop} />
+        <Coupon prop={prop} setIsMenu={setIsMenu} />
         <Point prop={prop} />
       </Layout>
       <Layout>
         <Title>배달 주문 내역</Title>
       </Layout>
+      {isMenu ? <CouponMenu prop={prop} setIsMenu={setIsMenu} /> : <></>}
     </OrderPageLayout>
   );
 }
 
 export const OrderPageLayout = styled.div`
+  position: relative;
+
   max-width: 480px;
   min-width: 320px;
   height: 100%;
