@@ -53,6 +53,7 @@ export const DiscountMethodInput = styled.input`
   color: rgb(102, 102, 102);
 
   outline: none;
+  text-overflow: ellipsis;
 
   &:disabled {
     background: white;

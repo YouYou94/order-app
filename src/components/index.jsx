@@ -8,7 +8,7 @@ export { Title, SubTitle } from './common/Title.jsx';
 
 export { DiscountButton } from './common/Button.jsx';
 
-export { DiscountLabel } from './common/Label.jsx';
+export { DiscountLabel, CouponLabel } from './common/Label.jsx';
 
 export { OrdererAddress, OrdererPhoneNum } from './Orderer/OrdererInfo.jsx';
 
@@ -19,4 +19,5 @@ export {
 } from './Orderer/OrderRequest.jsx';
 
 export { Coupon } from './Discount/Coupon.jsx';
+export { CouponMenu } from './Discount/CouponMenu.jsx';
 export { Point } from './Discount/Point.jsx';
