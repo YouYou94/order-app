@@ -82,3 +82,11 @@ export const SHOPPINGBASKET = [
     price: 50000,
   },
 ];
+
+export const RESULTPRICE = SHOPPINGBASKET => {
+  let result = 0;
+  for (let i = 0; i < SHOPPINGBASKET.length; i++)
+    result += SHOPPINGBASKET[i].price * SHOPPINGBASKET[i].count;
+
+  return result;
+};
