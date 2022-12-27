@@ -11,10 +11,12 @@ import {
   Coupon,
   Point,
   CouponMenu,
+  Pay,
+  History,
 } from '../components';
 import { useState, useContext } from 'react';
 import { UserContext } from '../App';
-import { COUPON, NONE, REQUESTLIST } from '../Constants';
+import { NONE, REQUESTLIST, RESULTPRICE, SHOPPINGBASKET } from '../Constants';
 
 export default function OrderPage() {
   const { user } = useContext(UserContext);
@@ -38,11 +40,13 @@ export default function OrderPage() {
       name: '',
       price: '',
     },
+
+    totalPrice: RESULTPRICE(SHOPPINGBASKET),
   });
 
   const [isMenu, setIsMenu] = useState(false);
 
-  //console.log(result);
+  console.log(result);
 
   const prop = { result, setResult };
 
@@ -66,8 +70,9 @@ export default function OrderPage() {
         <Coupon prop={prop} setIsMenu={setIsMenu} />
         <Point prop={prop} />
       </Layout>
-      <Layout>
-        <Title>배달 주문 내역</Title>
+      <Layout isResult={true}>
+        <History prop={prop} />
+        <Pay prop={prop} />
       </Layout>
       {isMenu ? <CouponMenu prop={prop} setIsMenu={setIsMenu} /> : <></>}
     </OrderPageLayout>
