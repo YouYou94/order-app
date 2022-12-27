@@ -31,7 +31,11 @@ export function Coupon({ prop, setIsMenu }) {
         </DiscountLabel>
       </LabelBox>
       <InputBox>
-        <DiscountInput placeholder={'쿠폰을 선택해주세요.'} disabled={true} />
+        <DiscountInput
+          value={result.discount.method === COUPON ? result.discount.name : ''}
+          placeholder={'쿠폰을 선택해주세요.'}
+          disabled={true}
+        />
         <DiscountButton onHandler={onHandlerClickCouponSelect}>
           선택
         </DiscountButton>

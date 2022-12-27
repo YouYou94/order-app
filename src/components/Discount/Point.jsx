@@ -64,7 +64,10 @@ export function Point({ prop }) {
         </DiscountLabel>
       </LabelBox>
       <InputBox>
-        <DiscountInput value={point} onHandler={onHandlerChangePoint} />
+        <DiscountInput
+          value={result.discount.method === POINT ? point : ''}
+          onHandler={onHandlerChangePoint}
+        />
         <DiscountButton onHandler={onHandlerClickPointAll}>
           모두 사용
         </DiscountButton>
