@@ -10,7 +10,7 @@ export function Pay({ prop }) {
         result.additional_address
       }\n전화번호: ${result.phone_number}\n주문 요청 사항: ${
         result.request.user_request
-      }\n결제 수단: ${''}\n할인 수단: ${
+      }\n결제 수단: ${result.payment}\n할인 수단: ${
         result.discount.method
       }\n총 결제 금액: ${(
         result.resultPrice - result.discount.price
