@@ -38,6 +38,7 @@ export function CouponMenu({ prop, setIsMenu }) {
 
   return (
     <MenuLayout>
+      <WhiteSpace onClick={() => setIsMenu(false)} />
       <SelectBox>
         <Title align={'center'}>보유 쿠폰</Title>
         <ListBox>
@@ -149,4 +150,10 @@ export const LabelBox = styled.div`
   height: 23px;
 
   gap: 4px;
+`;
+
+export const WhiteSpace = styled.div`
+  flex: 1;
+
+  width: 100%;
 `;
