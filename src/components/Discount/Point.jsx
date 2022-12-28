@@ -60,7 +60,7 @@ export function Point({ prop }) {
           포인트
         </DiscountLabel>
         <DiscountLabel bold={700} color={'rgb(150, 18, 231)'}>
-          포인트 {user.points.toLocaleString('ko-KR')}보유
+          {user.points.toLocaleString('ko-KR')} 포인트 보유
         </DiscountLabel>
       </LabelBox>
       <InputBox>

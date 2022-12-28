@@ -31,7 +31,7 @@ export default function OrderPage() {
     request: {
       list: REQUESTLIST,
       custom: false,
-      user_request: '',
+      user_request: '없음',
     },
     discount: {
       method: NONE,
@@ -46,7 +46,7 @@ export default function OrderPage() {
 
   const [isMenu, setIsMenu] = useState(false);
 
-  console.log(result);
+  //console.log(result);
 
   const prop = { result, setResult };
 
