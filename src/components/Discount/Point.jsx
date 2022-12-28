@@ -11,11 +11,18 @@ export function Point({ prop }) {
 
   // 유효성 검사 체크리스트
   // 숫자만 입력 가능 (v)
-  // 보유 포인트보다 작게 ()
+  // 보유 포인트보다 작게 (v)
+  // 총 결제 금액보다 작게 ()
   const onHandlerChangePoint = event => {
     const { value } = event.target;
 
     const check = /^[0-9]+$/;
+
+    if (value > user.points) {
+      alert('보유 포인트보다 적습니다!');
+      setPoint(user.points);
+      return;
+    }
 
     if (!check.test(value)) {
       alert('숫자만 입력 가능합니다.');
@@ -37,8 +44,14 @@ export function Point({ prop }) {
   };
 
   // 유효성 검사 체크리스트
+  // 포인트가 존재할 경우 실행하기(v)
   // 총 금액보다 작거나 같게 ()
   const onHandlerClickPointAll = () => {
+    if (user.points <= 0) {
+      alert('잔여 포인트가 없습니다.');
+      return;
+    }
+
     setPoint(user.points);
 
     setResult({
