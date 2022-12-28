@@ -20,7 +20,8 @@ function App() {
       if (data) setUser(data);
       else setUser(DEFAULTUSER);
 
-    if (error) console.log(error);
+    if (error)
+      console.log('서버가 연결되지 않았습니다. 기본 유저 정보로 진행합니다.');
   }, [data, error, loading]);
 
   useEffect(() => {
