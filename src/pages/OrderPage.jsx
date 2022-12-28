@@ -13,6 +13,7 @@ import {
   CouponMenu,
   Pay,
   History,
+  Payment,
 } from '../components';
 import { useState, useContext } from 'react';
 import { UserContext } from '../App';
@@ -33,6 +34,7 @@ export default function OrderPage() {
       custom: false,
       user_request: '없음',
     },
+    payment: user.payment_methods[0].vendor_name,
     discount: {
       method: NONE,
       type: '',
@@ -64,6 +66,7 @@ export default function OrderPage() {
       </Layout>
       <Layout>
         <Title>결제 수단 선택</Title>
+        <Payment prop={prop} />
       </Layout>
       <Layout>
         <Title>할인 수단 선택</Title>
