@@ -18,6 +18,8 @@ export {
   RequestCustom,
 } from './Orderer/OrderRequest.jsx';
 
+export { Payment } from './PaymentMethod/Payment.jsx';
+
 export { Coupon } from './Discount/Coupon.jsx';
 export { CouponMenu } from './Discount/CouponMenu.jsx';
 export { Point } from './Discount/Point.jsx';
