@@ -21,8 +21,8 @@ export const DEFAULTUSER = {
       card_number: '1959196220129591',
     },
   ],
-  coupons: [],
-  points: 0,
+  coupons: ['1jgj391j3ig', '996k3j2kd'],
+  points: 10000,
 };
 
 // Request
