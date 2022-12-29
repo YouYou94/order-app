@@ -46,7 +46,6 @@ export default function OrderPage() {
 
   const [isMenu, setIsMenu] = useState(false);
 
-  console.log(result);
   const prop = { result, setResult };
 
   return (
