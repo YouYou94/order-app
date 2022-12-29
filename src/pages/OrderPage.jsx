@@ -23,8 +23,6 @@ export default function OrderPage() {
   const { user } = useContext(UserContext);
   const { address, phone_number } = user;
 
-  //console.log(user);
-
   const [result, setResult] = useState({
     address: `${address.city} ${address.state} ${address.address_line}`,
     additional_address: `${address.additional_address}`,
@@ -38,9 +36,9 @@ export default function OrderPage() {
     discount: {
       method: NONE,
       type: '',
-      value: '',
+      value: 0,
       name: '',
-      price: '',
+      price: 0,
     },
 
     totalPrice: RESULTPRICE(SHOPPINGBASKET),
@@ -48,8 +46,7 @@ export default function OrderPage() {
 
   const [isMenu, setIsMenu] = useState(false);
 
-  //console.log(result);
-
+  console.log(result);
   const prop = { result, setResult };
 
   return (
