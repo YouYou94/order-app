@@ -13,7 +13,7 @@ export function Point({ prop }) {
   // 유효성 검사 체크리스트
   // 숫자만 입력 가능 (v)
   // 보유 포인트보다 작게 (v)
-  // 총 결제 금액보다 작게 ()
+  // 총 결제 금액보다 작게 (v)
   const onHandlerChangePoint = event => {
     const { value } = event.target;
 
@@ -52,23 +52,28 @@ export function Point({ prop }) {
 
   // 유효성 검사 체크리스트
   // 포인트가 존재할 경우 실행하기(v)
-  // 총 금액보다 작거나 같게 ()
+  // 총 금액보다 작거나 같게 (v)
   const onHandlerClickPointAll = () => {
+    let pointAll =
+      Number(user.points) - result.totalPrice >= 0
+        ? Number(result.totalPrice)
+        : Number(user.points);
+
     if (user.points <= 0) {
       alert('잔여 포인트가 없습니다.');
       return;
     }
 
-    setPoint(Number(user.points));
+    setPoint(pointAll);
 
     setResult({
       ...result,
       discount: {
         method: POINT,
         type: FIXED,
-        value: point,
-        name: '포인트 사용',
-        price: point,
+        value: pointAll,
+        name: POINT,
+        price: pointAll,
       },
     });
   };
