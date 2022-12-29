@@ -13,7 +13,7 @@ export function Pay({ prop }) {
       }\n결제 수단: ${result.payment}\n할인 수단: ${
         result.discount.method
       }\n총 결제 금액: ${(
-        result.resultPrice - result.discount.price
+        result.totalPrice - result.discount.price
       ).toLocaleString('ko-KR')} 원\n결제완료!`
     );
   };

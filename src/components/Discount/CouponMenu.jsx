@@ -8,8 +8,6 @@ export function CouponMenu({ prop, setIsMenu }) {
   const { couponList } = useContext(UserContext);
   const { result, setResult } = prop;
 
-  //console.log(couponList);
-
   const onHandlerClickCoupon = event => {
     const { id } = event.target;
 
@@ -22,14 +20,10 @@ export function CouponMenu({ prop, setIsMenu }) {
         method: COUPON,
         type: type,
         value:
-          type === RATED
-            ? Math.ceil((result.resultPrice * value) / 100)
-            : value,
+          type === RATED ? Math.ceil((result.totalPrice * value) / 100) : value,
         name: name,
         price:
-          type === RATED
-            ? Math.ceil((result.resultPrice * value) / 100)
-            : value,
+          type === RATED ? Math.ceil((result.totalPrice * value) / 100) : value,
       },
     });
 
