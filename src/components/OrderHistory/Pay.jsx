@@ -16,6 +16,8 @@ export function Pay({ prop }) {
         result.totalPrice - result.discount.price
       ).toLocaleString('ko-KR')} 원\n결제완료!`
     );
+
+    window.location.reload();
   };
   return (
     <PayBox>
