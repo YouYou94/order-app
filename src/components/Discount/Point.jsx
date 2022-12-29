@@ -2,11 +2,12 @@ import { DiscountLabel, DiscountInput, DiscountButton } from '../index.jsx';
 import styled from 'styled-components';
 import { useContext, useState } from 'react';
 import { UserContext } from '../../App.js';
-import { POINT, FIXED } from '../../Constants.js';
+import { POINT, FIXED, NONE } from '../../Constants.js';
 
 export function Point({ prop }) {
   const { user } = useContext(UserContext);
   const { result, setResult } = prop;
+  const totalPrice = result.totalPrice;
   const [point, setPoint] = useState();
 
   // 유효성 검사 체크리스트
@@ -16,31 +17,37 @@ export function Point({ prop }) {
   const onHandlerChangePoint = event => {
     const { value } = event.target;
 
+    let valid = true;
+
     const check = /^[0-9]+$/;
 
     if (value > user.points) {
       alert('보유 포인트보다 적습니다!');
-      setPoint(user.points);
-      return;
+      valid = false;
+    }
+
+    if (value > totalPrice) {
+      alert('결제 금액보다 많습니다!');
+      valid = false;
     }
 
     if (!check.test(value)) {
       alert('숫자만 입력 가능합니다.');
-      setPoint(0);
-    } else {
-      setPoint(Number(value));
-
-      setResult({
-        ...result,
-        discount: {
-          method: POINT,
-          type: FIXED,
-          value: point,
-          name: '포인트 사용',
-          price: point,
-        },
-      });
+      valid = false;
     }
+
+    setPoint(valid ? Number(value) : 0);
+
+    setResult({
+      ...result,
+      discount: {
+        method: valid ? POINT : NONE,
+        type: valid ? FIXED : '',
+        value: valid ? Number(value) : 0,
+        name: valid ? POINT : '',
+        price: valid ? Number(value) : 0,
+      },
+    });
   };
 
   // 유효성 검사 체크리스트
@@ -52,7 +59,7 @@ export function Point({ prop }) {
       return;
     }
 
-    setPoint(user.points);
+    setPoint(Number(user.points));
 
     setResult({
       ...result,
