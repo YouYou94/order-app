@@ -18,8 +18,6 @@
 
 ### 2.1 사용 기술
 
-- HTML
-- CSS
 - JavaScript
 - React
 - Styled-Components
@@ -40,7 +38,7 @@
 - 주문 요청 사항 직접 입력
 - 결제 수단 선택
 - 할인 수단 쿠폰 선택
-- 할인 수단 포인트 선택
+- 할인 수단 포인트 사용
 - 결제하기
 
 </br>
@@ -60,7 +58,7 @@
 
 - 전역 상태 관리를 이용한 props 전달
 
-  - `props drilling`의 문제점을 해결하기 위해 전역 상태 관리 라이브러리인 `Context API` 사용
+  - 상위 컴포넌트에서 하위 컴포넌트의 깊이가 깊어질수록 생길 수 있는 `props drilling`의 문제를 방지하기 위해 전역 상태 관리 라이브러리인 `Context API` 사용
 
 - 유효성 검사
 
@@ -90,4 +88,38 @@
 
 ## 6. UI
 
-- 준비중
+전체 화면
+
+- 로컬 서버 연동 시 사용자 데이터
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src='src/assets/api 연동 시.JPG' alt="api 연동 시" />
+
+- 로컬 서버 미 연동 시 사용자 데이터
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img src='src/assets/api 미연동 시.JPG' alt="api 미연동 시" />
+
+주문요청사항
+
+- 직접 입력 선택 시
+
+  &nbsp;<img src='src/assets/주문요청사항 직접입력.JPG' alt="주문요청사항 직접입력">
+
+할인수단선택
+
+- 쿠폰 선택 메뉴
+
+  &nbsp;<img src='src/assets/쿠폰 선택.JPG' alt="쿠폰 선택">
+
+- 쿠폰 사용
+
+  &nbsp;<img src='src/assets/쿠폰 사용 시.JPG' alt="쿠폰 사용 시">
+
+- 포인트 사용
+
+  &nbsp;<img src='src/assets/포인트 사용.JPG' alt="포인트 사용">
+
+결제하기
+
+- 결제하기 버튼 클릭 시
+
+  &nbsp;<img src='src/assets/결제하기.JPG' alt="결제하기">
