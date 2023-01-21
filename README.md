@@ -86,7 +86,33 @@
 </br>
 </br>
 
-## 6. UI
+## 📁 폴더 구조
+
+```
+order-app
+├─ 📁 src
+│  ├─ 📁 assets
+│  ├─ 📁 components
+│  │  ├─ 📁 common
+│  │  ├─ 📁 custom
+│  │  ├─ 📁 Discount
+│  │  ├─ 📁 Orderer
+│  │  ├─ 📁 OrderHistory
+│  │  ├─ 📁 PaymentMethod
+│  │  └─ index.jsx
+│  ├─ 📁 pages
+│  └─ 📁 router
+├─ App.css
+├─ App.jsx
+├─ Constants.jsx
+└─ index.jsx
+
+```
+
+</br>
+</br>
+
+## UI 화면 구성
 
 전체 화면
 
